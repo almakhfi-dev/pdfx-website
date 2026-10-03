@@ -585,3 +585,15 @@ footer p {
 .preview-item img.rotated-270 {
     transform: rotate(270deg);
 }
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    margin: 0 6px;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
