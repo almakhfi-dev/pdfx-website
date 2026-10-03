@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PDFx - Free Online PDF Tools</title>
+
+    <meta name="description"
+          content="PDFx is a free online PDF tool. Convert JPG to PDF, PDF to JPG, merge, split, delete, rearrange and extend PDF files easily.">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="pdfx-logo.png">
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="container header-inner">
+
+        <a href="#" class="logo">
+            <img
+                src="pdfx-logo.png"
+                alt="PDFx logo"
+                class="brand-logo">
+            <span class="brand-name">PDFx</span>
+        </a>
+
+        <span class="logo-text">Simple PDF Tools</span>
+
+    </div>
+</header>
+
+
+<main>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+
+            <h1>PDF tools, made simple.</h1>
+
+            <p>
+                Convert, merge, split, edit and manage your PDF files
+                directly in your browser.
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- =========================================================
+         TEST AD SLOT #1 - TOP
+         LATER: Replace the TEST AD box with real Google AdSense code.
+         ========================================================= -->
+    <section class="ad-section">
+        <div class="container">
+            <div class="test-ad">
+                <span>TEST AD</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- TOOLS -->
+    <section class="tools-section">
+
+        <div class="container">
+
+            <h2>PDF Tools</h2>
+
+            <div class="tools-grid">
+
+
+                <!-- JPG TO PDF -->
+                <div class="tool-card">
+
+                    <div class="tool-icon">🖼️</div>
+
+                    <h3>JPG / PNG to PDF</h3>
+
+                    <p>
+                        Convert images into a PDF document.
+                    </p>
+
+                    <input
+                        type="file"
+                        id="imageInput"
+                        accept="image/jpeg,image/png"
+                        multiple
+                    >
+
+                    <div id="imagePreview"
+                         class="preview-grid">
+                    </div>
+
+                    <p class="drag-hint">
+                        Drag images to change their order. Use ↶ / ↷ to rotate.
+                    </p>
+
+                    <button
+                        id="convertImageBtn"
+                        class="primary-btn"
+                        disabled>
+                        Convert to PDF
+                    </button>
+
+                    <div id="imageStatus"
+                         class="status">
+                    </div>
+
+                </div>
+
+
+
+                <!-- PDF TO JPG -->
+                <div class="tool-card">
+
+                    <div class="tool-icon">📄</div>
+
+                    <h3>PDF to JPG</h3>
+
+                    <p>
+                        Convert selected PDF pages into JPG images.
+                    </p>
+
+                    <input
+                        type="file"
+                        id="pdfJpgInput"
+                        accept="application/pdf"
+                    >
+
+                    <div class="small-actions">
+
+                        <button
+                            id="selectAllJpgBtn"
+                            class="secondary-btn"
+                            disabled>
+                            Select All
+                        </button>
+
+                        <button
+                            id="clearJpgBtn"
+                            class="secondary-btn"
+                            disabled>
+                            Clear
+                        </button>
+
+                    </div>
+
+                    <div id="pdfJpgPreview"
+                         class="preview-grid">
+                    </div>
+
+                    <button
+                        id="convertJpgBtn"
+                        class="primary-btn"
+                        disabled>
+                        Convert Selected Pages
+                    </button>
+
+                    <div id="pdfJpgStatus"
+                         class="status">
+                    </div>
+
+                </div>
+
+
+
+                <!-- MERGE PDF -->
+                <div class="tool-card">
+
+                    <div class="tool-icon">📚</div>
+
+                    <h3>Merge PDF</h3>
+
+                    <p>
+                        Combine multiple PDF files into one PDF.
+                    </p>
+
+                    <input
+                        type="file"
+                        id="mergeInput"
+                        accept="application/pdf"
+                        multiple
+                    >
+
+                    <div id="mergePreview"
+                         class="file-list">
+                    </div>
+
+                    <button
+                        id="mergeBtn"
+                        class="primary-btn"
+                        disabled>
+                        Merge PDFs
+                    </button>
+
+                    <div id="mergeStatus"
+                         class="status">
+                    </div>
+
+                </div>
+
+
+
+                <!-- SPLIT PDF -->
+                <div class="tool-card">
+
+                    <div class="tool-icon">✂️</div>
+
+                    <h3>Split PDF</h3>
+
+                    <p>
+                        Select pages and create a new PDF.
+                    </p>
+
+                    <input
+                        type="file"
+                        id="splitInput"
+                        accept="application/pdf"
+                    >
+
+                    <div id="splitPreview"
+                         class="preview-grid">
+                    </div>
+
+                    <button
+                        id="splitBtn"
+                        class="primary-btn"
+                        disabled>
+                        Create Selected PDF
+                    </button>
+
+                    <div id="splitStatus"
+                         class="status">
+                    </div>
+
+                </div>
+
+
+
+                <!-- DELETE PDF -->
+                <div class="tool-card">
+
+                    <div class="tool-icon">🗑️</div>
+
+                    <h3>Delete PDF Pages</h3>
+
+                    <p>
+                        Select pages that you want to delete.
+                    </p>
+
+                    <input
+                        type="file"
+                        id="deleteInput"
+                        accept="application/pdf"
+                    >
+
+                    <div id="deletePreview"
+                         class="preview-grid">
+                    </div>
+
+                    <button
+                        id="deleteBtn"
+                        class="primary-btn"
+                        disabled>
+                        Delete Selected Pages
+                    </button>
+
+                    <div id="deleteStatus"
+                         class="status">
+                    </div>
+
+                </div>
+
+
+
+                <!-- REARRANGE PDF -->
+                <div class="tool-card">
+
+                    <div class="tool-icon">↕️</div>
+
+                    <h3>Rearrange PDF</h3>
+
+                    <p>
+                        Change the order of existing PDF pages.
+                    </p>
+
+                    <input
+                        type="file"
+                        id="rearrangeInput"
+                        accept="application/pdf"
+                    >
+
+                    <div id="rearrangePreview"
+                         class="preview-grid">
+                    </div>
+
+                    <p class="drag-hint">
+                        Drag pages to change their order. Use ↶ / ↷ to rotate.
+                    </p>
+
+                    <button
+                        id="rearrangeBtn"
+                        class="primary-btn"
+                        disabled>
+                        Rearrange PDF
+                    </button>
+
+                    <div id="rearrangeStatus"
+                         class="status">
+                    </div>
+
+                </div>
+
+
+
+                <!-- PDF EXTEND -->
+                <div class="tool-card">
+
+                    <div class="tool-icon">➕</div>
+
+                    <h3>PDF Extend</h3>
+
+                    <p>
+                        Add new pages to an existing PDF
+                        and change their order.
+                    </p>
+
+                    <input
+                        type="file"
+                        id="extendPdfInput"
+                        accept="application/pdf"
+                    >
+
+                    <div id="extendPreview"
+                         class="preview-grid">
+                    </div>
+
+                    <button
+                        id="extendAddBtn"
+                        class="secondary-btn extend-add-btn"
+                        disabled>
+                        + Add JPG / PNG Pages
+                    </button>
+
+                    <input
+                        type="file"
+                        id="extendImageInput"
+                        accept="image/jpeg,image/png"
+                        multiple
+                        hidden
+                    >
+
+                    <p class="drag-hint">
+                        Drag pages to change their order. Use ↶ / ↷ to rotate.
+                    </p>
+
+                    <button
+                        id="extendBtn"
+                        class="primary-btn"
+                        disabled>
+                        Extend PDF
+                    </button>
+
+                    <div id="extendStatus"
+                         class="status">
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ANDROID APP -->
+    <section class="android-section">
+
+        <div class="container android-box">
+
+            <div class="android-brand">
+                <img
+                    src="pdfx-logo.png"
+                    alt="PDFx logo"
+                    class="section-logo">
+                <div>
+                    <h2>PDFx Android App</h2>
+
+                <p>
+                    Prefer using PDFx on your Android phone?
+                    Get the PDFx app from Google Play.
+                </p>
+                </div>
+            </div>
+
+            <a
+                href="https://play.google.com/store/apps/details?id=com.almakhfi.xpdf"
+                target="_blank"
+                rel="noopener"
+                class="android-btn">
+
+                Get PDFx on Google Play
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ABOUT -->
+    <section class="about-section">
+
+        <div class="container">
+
+            <h2>About PDFx</h2>
+
+            <p>
+                PDFx provides simple and useful PDF tools that work
+                directly in your browser. Your files are processed
+                locally whenever possible, without requiring a server.
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="container">
+
+        <p>
+            © 2026 PDFx. All rights reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<!-- DOWNLOAD AD MODAL -->
+
+<div
+    id="downloadModal"
+    class="modal hidden">
+
+    <div class="modal-overlay"></div>
+
+    <div class="download-modal">
+
+        <button
+            id="closeDownloadModal"
+            class="modal-close">
+            ×
+        </button>
+
+        <!-- =========================================================
+             TEST AD MODAL
+             LATER: If a suitable ad format is used here, replace
+             only the marked TEST AD area with the real ad code.
+             ========================================================= -->
+        <img
+            src="pdfx-logo.png"
+            alt="PDFx"
+            class="modal-logo">
+
+        <div class="ad-title">
+            Advertisement
+        </div>
+
+        <div class="ad-placeholder">
+            <span>TEST AD</span>
+        </div>
+
+        <h3>
+            Download Started
+        </h3>
+
+        <p>
+            Your file has been downloaded successfully.
+        </p>
+
+        <button
+            id="closeAdBtn"
+            class="primary-btn">
+
+            Close
+
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!-- LIBRARIES -->
+
+<script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+/* =========================================================
+   PDFx - Online PDF Tools
+   ========================================================= */

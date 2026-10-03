@@ -1,0 +1,587 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f8fa;
+    color: #202124;
+    line-height: 1.6;
+}
+
+.container {
+    width: 92%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+
+/* HEADER */
+
+.site-header {
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.header-inner {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    text-decoration: none;
+    color: #111827;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.brand-logo {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    display: block;
+    border-radius: 8px;
+}
+
+.brand-name {
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.logo-text {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.android-brand {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.section-logo {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    flex: 0 0 auto;
+}
+
+.modal-logo {
+    width: 54px;
+    height: 54px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 8px;
+}
+
+
+
+/* HERO */
+
+.hero {
+    background: #ffffff;
+    text-align: center;
+    padding: 65px 20px 55px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 12px;
+}
+
+.hero p {
+    max-width: 650px;
+    margin: auto;
+    color: #6b7280;
+    font-size: 17px;
+}
+
+
+/* TOOLS */
+
+.tools-section {
+    padding: 50px 0;
+}
+
+.tools-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+
+/* CARD */
+
+.tool-card {
+    background: #ffffff;
+    border: 1px solid #e3e5e8;
+    border-radius: 14px;
+    padding: 25px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+}
+
+.tool-card h3 {
+    font-size: 21px;
+    margin-bottom: 7px;
+}
+
+.tool-card p {
+    color: #6b7280;
+    margin-bottom: 18px;
+}
+
+.tool-icon {
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+
+/* FILE INPUT */
+
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px dashed #cfd4da;
+    border-radius: 8px;
+    background: #fafafa;
+    margin-bottom: 15px;
+}
+
+
+/* BUTTONS */
+
+button {
+    font-family: inherit;
+}
+
+.primary-btn,
+.secondary-btn,
+.android-btn {
+    border: none;
+    border-radius: 8px;
+    padding: 11px 16px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.primary-btn {
+    width: 100%;
+    background: #111827;
+    color: white;
+    margin-top: 12px;
+}
+
+.primary-btn:hover {
+    background: #2b3443;
+}
+
+.primary-btn:disabled {
+    background: #c9cdd3;
+    cursor: not-allowed;
+}
+
+.secondary-btn {
+    background: #f0f1f3;
+    color: #202124;
+}
+
+.secondary-btn:hover {
+    background: #e5e7eb;
+}
+
+.secondary-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.small-actions {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+
+/* PDF EXTEND ADD BUTTON */
+
+.extend-add-btn {
+    width: 100%;
+    margin-top: 12px;
+}
+
+
+/* PREVIEW */
+
+.preview-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 12px;
+    max-height: 430px;
+    overflow-y: auto;
+}
+
+.preview-item {
+    position: relative;
+    background: #f8f9fa;
+    border: 2px solid #e2e5e9;
+    border-radius: 8px;
+    padding: 5px;
+    cursor: pointer;
+    min-width: 0;
+}
+
+.preview-item img {
+    width: 100%;
+    height: 115px;
+    object-fit: contain;
+    background: white;
+    border-radius: 5px;
+    display: block;
+}
+
+.preview-number {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 2px 1px;
+}
+
+.preview-item.selected {
+    border: 2px solid #111827;
+    background: #eef0f3;
+}
+
+.preview-item.dragging {
+    opacity: 0.45;
+    border-style: dashed;
+}
+
+.preview-item.drag-over {
+    border: 2px dashed #111827;
+}
+
+
+/* FILE LIST */
+
+.file-list {
+    margin-top: 15px;
+    max-height: 220px;
+    overflow-y: auto;
+}
+
+.file-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px 12px;
+    background: #f8f9fa;
+    border: 1px solid #e3e5e8;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.file-name {
+    font-size: 13px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.file-pages {
+    font-size: 12px;
+    color: #6b7280;
+    white-space: nowrap;
+}
+
+
+/* HINT */
+
+.drag-hint {
+    font-size: 12px !important;
+    color: #7b8087 !important;
+    margin-top: 8px;
+    margin-bottom: 0 !important;
+}
+
+
+/* STATUS */
+
+.status {
+    font-size: 13px;
+    margin-top: 10px;
+    color: #5f6368;
+    min-height: 20px;
+}
+
+
+/* ANDROID */
+
+.android-section {
+    padding: 20px 0 55px;
+}
+
+.android-box {
+    background: #ffffff;
+    border: 1px solid #e1e4e8;
+    border-radius: 14px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.android-box h2 {
+    margin-bottom: 5px;
+}
+
+.android-box p {
+    color: #6b7280;
+}
+
+.android-btn {
+    background: #111827;
+    color: white;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.android-btn:hover {
+    background: #2b3443;
+}
+
+
+/* ABOUT */
+
+.about-section {
+    background: #ffffff;
+    padding: 50px 0;
+    border-top: 1px solid #e5e7eb;
+}
+
+.about-section h2 {
+    margin-bottom: 10px;
+}
+
+.about-section p {
+    max-width: 800px;
+    color: #6b7280;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #111827;
+    color: #ffffff;
+    padding: 25px 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+
+
+/* =========================================================
+   TEST AD SLOTS
+   Replace only the TEST AD content later with real ad code.
+   ========================================================= */
+
+.ad-section {
+    padding: 18px 0;
+}
+
+.ad-section-middle {
+    padding: 5px 0 25px;
+}
+
+.test-ad {
+    width: 100%;
+    min-height: 110px;
+    background: #f5f6f8;
+    border: 1px solid #e1e4e9;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 12px;
+}
+
+.test-ad span {
+    letter-spacing: 0.5px;
+}
+
+/* MODAL */
+
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+}
+
+.download-modal {
+    position: relative;
+    width: 92%;
+    max-width: 430px;
+    margin: 8vh auto 0;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 25px;
+    text-align: center;
+    z-index: 2;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+
+.modal-close {
+    position: absolute;
+    right: 12px;
+    top: 8px;
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: transparent;
+    font-size: 25px;
+    color: #555;
+    cursor: pointer;
+}
+
+.ad-title {
+    font-size: 11px;
+    color: #777;
+    margin-bottom: 7px;
+}
+
+/* LATER: Real ad code can be placed inside this ad container. */
+.ad-placeholder {
+    height: 150px;
+    border: 1px solid #e1e4e9;
+    background: #f5f6f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #999;
+    font-size: 13px;
+    margin-bottom: 18px;
+}
+
+.download-modal h3 {
+    margin-bottom: 5px;
+}
+
+.download-modal p {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+
+    .tools-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .android-box {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .android-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .hero {
+        padding: 45px 15px;
+    }
+
+    .hero h1 {
+        font-size: 29px;
+    }
+
+    .tool-card {
+        padding: 20px;
+    }
+
+    .preview-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .preview-item img {
+        height: 90px;
+    }
+}
+
+
+/* ROTATE CONTROLS */
+.rotation-controls {
+    display: flex;
+    gap: 6px;
+    margin-top: 8px;
+}
+
+.rotate-btn {
+    flex: 1;
+    border: 1px solid #d9dde3;
+    background: #f7f8fa;
+    color: #202124;
+    border-radius: 7px;
+    padding: 6px 8px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.rotate-btn:hover {
+    background: #e9ebee;
+}
+
+.preview-item img.rotated-90 {
+    transform: rotate(90deg);
+}
+
+.preview-item img.rotated-180 {
+    transform: rotate(180deg);
+}
+
+.preview-item img.rotated-270 {
+    transform: rotate(270deg);
+}
