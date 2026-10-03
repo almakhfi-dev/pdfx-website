@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://YOUR-VERCEL-DOMAIN.vercel.app/sitemap.xml
+Sitemap: https://pdfx-website.vercel.app/sitemap.xml
