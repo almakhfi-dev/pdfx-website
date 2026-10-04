@@ -49,4 +49,20 @@
     <loc>https://pdfx-website.vercel.app/merge-pdf.html</loc>
 </url>
 
+    <url>
+    <loc>https://pdfx-website.vercel.app/split-pdf.html</loc>
+</url>
+
+<url>
+    <loc>https://pdfx-website.vercel.app/delete-pdf-pages.html</loc>
+</url>
+
+<url>
+    <loc>https://pdfx-website.vercel.app/rearrange-pdf.html</loc>
+</url>
+
+<url>
+    <loc>https://pdfx-website.vercel.app/pdf-extend.html</loc>
+</url>
+
 </urlset>
