@@ -79,70 +79,14 @@ function downloadBlob(blob, filename) {
 
 
 /* =========================================================
-   DOWNLOAD FIRST -> TEST AD
-   NOTE:
-   This is only a test placeholder right now.
-   Later, real web ad code can be integrated in the marked
-   HTML ad slots after the site's advertising setup is ready.
+   DOWNLOAD FILE
+   Direct, clean download compliant with Google Publisher Policies
+   (No ads on modals, alert popups or behavioral screens)
    ========================================================= */
 
 function requestDownload(blob, filename) {
-
     downloadBlob(blob, filename);
-
-    setTimeout(function() {
-
-        const modal =
-            document.getElementById(
-                "downloadModal"
-            );
-
-        if (modal) {
-            modal.classList.remove("hidden");
-        }
-
-    }, 500);
 }
-
-
-/* CLOSE MODAL */
-
-function closeDownloadModal() {
-
-    const modal =
-        document.getElementById(
-            "downloadModal"
-        );
-
-    if (modal) {
-        modal.classList.add("hidden");
-    }
-}
-
-
-document.getElementById(
-    "closeDownloadModal"
-).addEventListener(
-    "click",
-    closeDownloadModal
-);
-
-
-document.getElementById(
-    "closeAdBtn"
-).addEventListener(
-    "click",
-    closeDownloadModal
-);
-
-
-document.querySelector(
-    ".modal-overlay"
-).addEventListener(
-    "click",
-    closeDownloadModal
-);
-
 
 /* =========================================================
    JPG TO PDF
@@ -158,7 +102,7 @@ const convertImageBtn =
     document.getElementById("convertImageBtn");
 
 
-imageInput.addEventListener(
+if (imageInput) imageInput.addEventListener(
     "change",
     function() {
 
@@ -998,7 +942,7 @@ function addImagePage(pdfDoc, image, rotation) {
 
 /* IMAGE -> PDF */
 
-convertImageBtn.addEventListener(
+if (convertImageBtn) convertImageBtn.addEventListener(
     "click",
     async function() {
 
@@ -1104,7 +1048,7 @@ const convertJpgBtn =
     document.getElementById("convertJpgBtn");
 
 
-pdfJpgInput.addEventListener(
+if (pdfJpgInput) pdfJpgInput.addEventListener(
     "change",
     async function() {
 
@@ -1349,7 +1293,7 @@ function updateJpgSelection() {
 }
 
 
-selectAllJpgBtn.addEventListener(
+if (selectAllJpgBtn) selectAllJpgBtn.addEventListener(
     "click",
     function() {
 
@@ -1386,7 +1330,7 @@ selectAllJpgBtn.addEventListener(
 );
 
 
-clearJpgBtn.addEventListener(
+if (clearJpgBtn) clearJpgBtn.addEventListener(
     "click",
     function() {
 
@@ -1412,7 +1356,7 @@ clearJpgBtn.addEventListener(
 );
 
 
-convertJpgBtn.addEventListener(
+if (convertJpgBtn) convertJpgBtn.addEventListener(
     "click",
     async function() {
 
@@ -1552,7 +1496,7 @@ const mergeBtn =
     document.getElementById("mergeBtn");
 
 
-mergeInput.addEventListener(
+if (mergeInput) mergeInput.addEventListener(
     "change",
     async function() {
 
@@ -1647,7 +1591,7 @@ mergeInput.addEventListener(
 );
 
 
-mergeBtn.addEventListener(
+if (mergeBtn) mergeBtn.addEventListener(
     "click",
     async function() {
 
@@ -1759,7 +1703,7 @@ const splitBtn =
     document.getElementById("splitBtn");
 
 
-splitInput.addEventListener(
+if (splitInput) splitInput.addEventListener(
     "change",
     async function() {
 
@@ -1853,7 +1797,7 @@ splitInput.addEventListener(
 );
 
 
-splitBtn.addEventListener(
+if (splitBtn) splitBtn.addEventListener(
     "click",
     async function() {
 
@@ -1969,7 +1913,7 @@ const deleteBtn =
     document.getElementById("deleteBtn");
 
 
-deleteInput.addEventListener(
+if (deleteInput) deleteInput.addEventListener(
     "change",
     async function() {
 
@@ -2055,7 +1999,7 @@ deleteInput.addEventListener(
 );
 
 
-deleteBtn.addEventListener(
+if (deleteBtn) deleteBtn.addEventListener(
     "click",
     async function() {
 
@@ -2183,7 +2127,7 @@ const rearrangeBtn =
     document.getElementById("rearrangeBtn");
 
 
-rearrangeInput.addEventListener(
+if (rearrangeInput) rearrangeInput.addEventListener(
     "change",
     async function() {
 
@@ -2480,7 +2424,7 @@ function renderRearrangePreview() {
 }
 
 
-rearrangeBtn.addEventListener(
+if (rearrangeBtn) rearrangeBtn.addEventListener(
     "click",
     async function() {
 
@@ -2618,7 +2562,7 @@ const extendBtn =
 
 /* SELECT EXISTING PDF */
 
-extendPdfInput.addEventListener(
+if (extendPdfInput) extendPdfInput.addEventListener(
     "change",
     async function() {
 
@@ -2711,7 +2655,7 @@ extendPdfInput.addEventListener(
 
 /* OPEN IMAGE SELECTOR */
 
-extendAddBtn.addEventListener(
+if (extendAddBtn) extendAddBtn.addEventListener(
     "click",
     function() {
 
@@ -2727,7 +2671,7 @@ extendAddBtn.addEventListener(
 
 /* ADD NEW IMAGE PAGES */
 
-extendImageInput.addEventListener(
+if (extendImageInput) extendImageInput.addEventListener(
     "change",
     async function() {
 
@@ -3116,7 +3060,7 @@ async function renderExtendPreview() {
    CREATE EXTENDED PDF
    ========================================================= */
 
-extendBtn.addEventListener(
+if (extendBtn) extendBtn.addEventListener(
     "click",
     async function() {
 

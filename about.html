@@ -1,105 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2662425279311804" crossorigin="anonymous"></script>
+
+    <title>About PDFx - Free Online PDF Tools & Privacy Architecture</title>
+    <meta name="description" content="Learn about PDFx, our mission to provide private, browser-based PDF utilities without server uploads, our modern web architecture, and our development standards.">
+    <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://pdfx-website.vercel.app/about.html">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2662425279311804"
-     crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" href="pdfx-logo.png">
 
-    <title>About PDFx - Free Online PDF Tools</title>
-
-    <meta name="description"
-          content="Learn about PDFx, a simple collection of free online PDF tools for converting, merging, splitting, rearranging and managing PDF files.">
+    <!-- Open Graph -->
+    <meta property="og:title" content="About PDFx - Free Online PDF Tools">
+    <meta property="og:description" content="Discover how PDFx is redefining document processing with 100% private in-browser technology.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pdfx-website.vercel.app/about.html">
+    <meta property="og:image" content="https://pdfx-website.vercel.app/pdfx-logo.png">
 
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="pdfx-logo.png">
 </head>
 
 <body>
 
 <header class="site-header">
     <div class="container header-inner">
-
-        <a href="index.html" class="logo">
-            <img src="pdfx-logo.png"
-                 alt="PDFx logo"
-                 class="brand-logo">
-            <span class="brand-name">PDFx</span>
-        </a>
-
-        <span class="logo-text">Simple PDF Tools</span>
-
+        <div class="brand-wrapper">
+            <a href="index.html" class="logo">
+                <img src="pdfx-logo.png" alt="PDFx logo" class="brand-logo">
+                <span class="brand-name">PDFx</span>
+            </a>
+            <span class="logo-text">Online PDF Tools</span>
+        </div>
+        <nav class="site-nav">
+            <a href="index.html">Home</a>
+            <a href="jpg-to-pdf.html">JPG to PDF</a>
+            <a href="pdf-to-jpg.html">PDF to JPG</a>
+            <a href="merge-pdf.html">Merge</a>
+            <a href="split-pdf.html">Split</a>
+            <a href="delete-pdf-pages.html">Delete</a>
+            <a href="rearrange-pdf.html">Rearrange</a>
+            <a href="pdf-extend.html">Extend</a>
+            <a href="about.html" class="active">About</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contact.html">Contact</a>
+        </nav>
     </div>
 </header>
 
+<div class="breadcrumb-section">
+    <div class="container">
+        <a href="index.html">Home</a>
+        <span>&rsaquo;</span>
+        <span class="current">About PDFx</span>
+    </div>
+</div>
+
 <main>
 
-<section class="about-section">
-    <div class="container">
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+            <h1>About PDFx</h1>
+            <p>
+                PDFx was created with a clear objective: to make essential PDF management tools fast, accessible,
+                and completely private for everyone around the world.
+            </p>
+        </div>
+    </section>
 
-        <h1>About PDFx</h1>
+    <!-- EDITORIAL CONTENT -->
+    <section class="content-section">
+        <div class="container">
+            <h2>Our Mission & Vision</h2>
+            <p>
+                In today's digital environment, Portable Document Format (PDF) files are the standard for legal contracts,
+                academic research, tax documentation, medical records, and corporate invoices. However, when everyday users
+                need to perform simple tasks—such as turning photos into a PDF, merging two reports, or removing a blank page—they
+                are often confronted with expensive proprietary software licenses or cloud converter websites that require uploading
+                confidential documents to third-party servers.
+            </p>
+            <p>
+                <strong>PDFx bridges this gap.</strong> We offer an open, web-accessible suite of document utilities that execute
+                entirely inside your browser. No subscription fees, no artificial document limits, no sign-ups, and most importantly,
+                zero server-side data retention.
+            </p>
 
-        <p>
-            PDFx is a collection of simple and useful online PDF tools
-            designed to make everyday PDF tasks easier.
-        </p>
+            <h2>Privacy by Design: Why In-Browser Processing Matters</h2>
+            <p>
+                Traditional online document converters follow an outdated client-server architecture: you upload your file to their remote
+                servers, their servers process it, and you download the converted file. This approach creates serious security risks,
+                including potential data interception, unauthorized archiving, and vulnerability to server breaches.
+            </p>
+            <p>
+                At PDFx, we built our entire platform upon the principle of <strong>Privacy by Design</strong>:
+            </p>
+            <ul>
+                <li><strong>Local Execution:</strong> When you open a PDF or image in PDFx, the file is read directly into your device's RAM memory using the HTML5 File API and WebAssembly.</li>
+                <li><strong>Zero Server Uploads:</strong> None of your document data, pages, or images are ever transmitted over the network to our servers.</li>
+                <li><strong>Privacy Protection:</strong> Because we never receive, process, or store your documents on any server, your personal files remain confidential and under your own control.</li>
+            </ul>
 
-        <p>
-            With PDFx, users can convert images to PDF, convert PDF pages
-            to JPG images, merge PDF files, split PDFs, delete pages,
-            rearrange pages and extend existing PDF documents.
-        </p>
+            <div class="callout-box">
+                <h4>Try it Offline</h4>
+                <p>
+                    Because PDFx runs entirely on your device, you can load our website, disconnect your internet connection,
+                    and perform your PDF transformations with complete confidence that not a single byte leaves your computer.
+                </p>
+            </div>
 
-        <h2>Our Goal</h2>
+            <h2>Our Technology Stack</h2>
+            <p>
+                PDFx relies on robust, open-source web technologies and modern browser standards to deliver desktop-class performance:
+            </p>
+            <div class="features-grid">
+                <div class="feature-box">
+                    <div class="f-icon">⚙️</div>
+                    <h4>PDF-Lib Engine</h4>
+                    <p>A pure JavaScript PDF manipulation engine that parses, edits, creates, and saves PDF documents with lossless fidelity.</p>
+                </div>
+                <div class="feature-box">
+                    <div class="f-icon">📄</div>
+                    <h4>Mozilla PDF.js</h4>
+                    <p>Industry-standard PDF parsing and rendering library developed by Mozilla for high-resolution canvas graphics rendering.</p>
+                </div>
+                <div class="feature-box">
+                    <div class="f-icon">📦</div>
+                    <h4>JSZip Technology</h4>
+                    <p>High-speed client-side ZIP packaging for batch conversions, ensuring convenient downloads without external tools.</p>
+                </div>
+            </div>
 
-        <p>
-            Our goal is to provide simple PDF utilities that are easy to
-            understand and use without complicated software.
-        </p>
+            <h2>Developer & Ongoing Maintenance</h2>
+            <p>
+                PDFx is developed and maintained by <strong>Almakhfi Dev</strong>. We actively monitor browser standards,
+                fix compatibility issues, and update libraries to support new PDF specifications and high-DPI displays.
+                In addition to our web platform, we also maintain the official PDFx Android application on Google Play
+                for users who need mobile document tools on their phones.
+            </p>
 
-        <h2>Privacy-Focused Processing</h2>
-
-        <p>
-            PDFx is designed so that supported file processing can take
-            place directly in your browser. Depending on the tool and
-            browser, files may be processed locally on your device rather
-            than uploaded to a server.
-        </p>
-
-        <h2>PDFx Android App</h2>
-
-        <p>
-            PDFx is also available as an Android application with
-            additional PDF utilities.
-        </p>
-
-        <p>
-            <a href="https://play.google.com/store/apps/details?id=com.almakhfi.xpdf"
-               target="_blank"
-               rel="noopener">
-                Get PDFx on Google Play
-            </a>
-        </p>
-
-    </div>
-</section>
+            <h3>Get in Touch</h3>
+            <p>
+                We welcome community feedback, feature suggestions, and bug reports. If you would like to get in touch with our team,
+                please visit our <a href="contact.html">Contact Page</a> or send an email directly to <a href="mailto:almakhfi.dev@gmail.com">almakhfi.dev@gmail.com</a>.
+            </p>
+        </div>
+    </section>
 
 </main>
 
+<!-- FOOTER -->
 <footer>
     <div class="container">
-
-        <p>© 2026 PDFx. All rights reserved.</p>
-
-        <p>
-            <a href="about.html">About</a> ·
-            <a href="faq.html">FAQ</a> ·
-            <a href="privacy.html">Privacy Policy</a> ·
-            <a href="terms.html">Terms of Use</a> ·
-            <a href="contact.html">Contact</a>
-        </p>
-
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <h4>PDFx Online Tools</h4>
+                <p>
+                    PDFx provides clean, privacy-first, browser-based utilities for managing, converting, and editing PDF files.
+                    All processing is conducted on the client side to keep your sensitive personal and business documents confidential.
+                </p>
+            </div>
+            <div class="footer-col">
+                <h5>PDF Utilities</h5>
+                <ul>
+                    <li><a href="jpg-to-pdf.html">JPG to PDF Converter</a></li>
+                    <li><a href="pdf-to-jpg.html">PDF to JPG Converter</a></li>
+                    <li><a href="merge-pdf.html">Merge PDF Files</a></li>
+                    <li><a href="split-pdf.html">Split PDF Pages</a></li>
+                    <li><a href="delete-pdf-pages.html">Delete PDF Pages</a></li>
+                    <li><a href="rearrange-pdf.html">Rearrange PDF Pages</a></li>
+                    <li><a href="pdf-extend.html">PDF Extend Tool</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Company & Legal</h5>
+                <ul>
+                    <li><a href="about.html">About PDFx</a></li>
+                    <li><a href="faq.html">Help & FAQ</a></li>
+                    <li><a href="contact.html">Contact Support</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 PDFx. All rights reserved. Built with client-side privacy by design.</p>
+        </div>
     </div>
 </footer>
 
