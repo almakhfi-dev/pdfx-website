@@ -7,7 +7,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2662425279311804" crossorigin="anonymous"></script>
 
     <title>Rearrange PDF Pages - Reorder & Rotate PDF Online Free | PDFx</title>
-    <meta name="description" content="Reorder and rotate PDF pages online for free with PDFx. Drag and drop thumbnails to rearrange pages and adjust orientations with 100% client-side privacy.">
+    <meta name="description" content="Reorder and rotate PDF pages online for free with PDFx. Drag and drop thumbnails to rearrange pages and adjust orientations with local file processing.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://pdfx-website.vercel.app/rearrange-pdf.html">
     <link rel="icon" type="image/png" href="pdfx-logo.png">
@@ -45,14 +45,14 @@
 <header class="site-header">
     <div class="container header-inner">
         <div class="brand-wrapper">
-            <a href="index.html" class="logo">
+            <a href="/" class="logo">
                 <img src="pdfx-logo.png" alt="PDFx logo" class="brand-logo">
                 <span class="brand-name">PDFx</span>
             </a>
             <span class="logo-text">Online PDF Tools</span>
         </div>
         <nav class="site-nav">
-            <a href="index.html">Home</a>
+            <a href="/">Home</a>
             <a href="jpg-to-pdf.html">JPG to PDF</a>
             <a href="pdf-to-jpg.html">PDF to JPG</a>
             <a href="merge-pdf.html">Merge</a>
@@ -69,9 +69,9 @@
 
 <div class="breadcrumb-section">
     <div class="container">
-        <a href="index.html">Home</a>
+        <a href="/">Home</a>
         <span>&rsaquo;</span>
-        <a href="index.html#tools">Tools</a>
+        <a href="/#tools">Tools</a>
         <span>&rsaquo;</span>
         <span class="current">Rearrange PDF Pages</span>
     </div>
@@ -85,10 +85,10 @@
             <h1>Rearrange PDF Pages Online Free</h1>
             <p>
                 Change page sequence, reorder document sections, and rotate upside-down pages with intuitive drag-and-drop.
-                All changes occur instantly inside your web browser with 100% private processing.
+                All changes occur instantly inside your web browser with local processing.
             </p>
             <div class="badge-group">
-                <span class="badge">🔒 100% Client-Side Privacy</span>
+                <span class="badge">🔒 Local File Processing</span>
                 <span class="badge">🖐️ Drag & Drop Ordering</span>
                 <span class="badge">🔄 90° / 180° / 270° Rotation</span>
                 <span class="badge">⚡ Zero Cloud Uploads</span>
@@ -105,6 +105,7 @@
                 Select a PDF file from your device. Drag thumbnails to change their sequential position. Click ↶ or ↷ to rotate individual pages.
             </p>
 
+            <label class="sr-only" for="rearrangeInput">Choose a PDF to reorder or rotate pages</label>
             <input type="file" id="rearrangeInput" accept="application/pdf">
             <div id="rearrangePreview" class="preview-grid"></div>
             <p class="drag-hint">Drag pages to change their order. Use ↶ / ↷ to rotate.</p>
@@ -124,17 +125,17 @@
             <div class="steps-grid">
                 <div class="step-card">
                     <div class="step-number">1</div>
-                    <h4>Upload Your Document</h4>
+                    <h3 class="legacy-h4">Upload Your Document</h3>
                     <p>Select your PDF file. The browser renders interactive page thumbnails in their current sequence.</p>
                 </div>
                 <div class="step-card">
                     <div class="step-number">2</div>
-                    <h4>Drag & Rotate</h4>
+                    <h3 class="legacy-h4">Drag & Rotate</h3>
                     <p>Click and drag any page thumbnail to move it earlier or later in the document. Click rotation arrows to adjust orientation.</p>
                 </div>
                 <div class="step-card">
                     <div class="step-number">3</div>
-                    <h4>Download Reordered PDF</h4>
+                    <h3 class="legacy-h4">Download Reordered PDF</h3>
                     <p>Click "Rearrange PDF". The browser generates your reorganized PDF document ready for immediate download.</p>
                 </div>
             </div>
@@ -151,18 +152,18 @@
 
             <h3>How Interactive Drag-and-Drop Simplifies Organization</h3>
             <p>
-                PDFx provides an intuitive visual interface where every single page of your document is presented as a high-fidelity thumbnail. Using standard HTML5 Drag and Drop events, you can grab any page and slide it into its proper place. Visual drop indicators ensure you see exactly where the page will land before you release the mouse or touchscreen.
+                PDFx provides an intuitive visual interface where every single page of your document is presented as a high-fidelity thumbnail. Using standard HTML5 Drag and Drop events, you can grab any page and slide it into its proper place. Visual drop indicators ensure you see exactly where the page will land before you release the mouse. Touch drag-and-drop support varies by browser.
             </p>
 
             <h3>Lossless Vector and Media Rotation</h3>
             <p>
-                Rotating a page in PDFx does not degrade the quality of your document. Rather than re-encoding the page as a bitmap image, PDFx updates the rotation metadata tag in the PDF page dictionary (<code>/Rotate 90</code>, <code>/Rotate 180</code>, <code>/Rotate 270</code>). All original text selectable characters, vector line art, and embedded font definitions remain 100% crisp and searchable.
+                Rotating a page in PDFx does not degrade the quality of your document. Rather than re-encoding the page as a bitmap image, PDFx updates the rotation metadata tag in the PDF page dictionary (<code>/Rotate 90</code>, <code>/Rotate 180</code>, <code>/Rotate 270</code>). Existing text, vectors, and images are copied without rasterizing the pages. Image-only scans do not become searchable.
             </p>
 
             <div class="callout-box">
-                <h4>Private & Secure In-Browser Processing</h4>
+                <h3 class="legacy-h4">Private & Secure In-Browser Processing</h3>
                 <p>
-                    Your business contracts, personal IDs, and confidential forms never touch any external server. Reordering happens directly in your browser's local memory, making PDFx fully compliant with enterprise privacy policies.
+                    The tool processes your selected PDF locally. Reordering happens directly in your browser's local memory, without uploading the document for reordering. Check your organization's policies before using third-party tools.
                 </p>
             </div>
 
@@ -184,27 +185,27 @@
 
             <div class="faq-grid">
                 <div class="faq-card">
-                    <h4>Can I remove a page while rearranging?</h4>
+                    <h3 class="legacy-h4">Can I remove a page while rearranging?</h3>
                     <p>Yes. Each page preview includes a remove button so you can discard unneeded sheets while reordering the rest.</p>
                 </div>
                 <div class="faq-card">
-                    <h4>Does rotating a page make the text unsearchable?</h4>
-                    <p>No. PDFx rotates the PDF coordinate matrix natively without flattening. All text remains selectable, searchable, and copyable.</p>
+                    <h3 class="legacy-h4">Does rotating a page make the text unsearchable?</h3>
+                    <p>No. PDFx rotates the PDF coordinate matrix natively without flattening. Existing selectable text is generally retained. Image-only scans remain image-only; no OCR is performed.</p>
                 </div>
                 <div class="faq-card">
-                    <h4>Are my files stored on remote cloud servers?</h4>
-                    <p>No. All rendering, drag-and-drop updates, and re-indexing occur strictly on your local device with 100% privacy.</p>
+                    <h3 class="legacy-h4">Are my files stored on remote cloud servers?</h3>
+                    <p>No. All rendering, drag-and-drop updates, and re-indexing occur strictly on your local device with local file processing.</p>
                 </div>
                 <div class="faq-card">
-                    <h4>Can I rearrange pages on a mobile touchscreen?</h4>
-                    <p>Yes. PDFx supports modern mobile browsers on both Android and iOS devices.</p>
+                    <h3 class="legacy-h4">Can I rearrange pages on a mobile touchscreen?</h3>
+                    <p>The layout adapts to mobile screens, but page drag-and-drop support depends on the browser and device. If dragging does not work, use a desktop browser.</p>
                 </div>
                 <div class="faq-card">
-                    <h4>Is there any cost or watermarking?</h4>
-                    <p>No. PDFx is 100% free forever and never injects watermarks or stamps into your documents.</p>
+                    <h3 class="legacy-h4">Is there any cost or watermarking?</h3>
+                    <p>No. PDFx is free to use and never injects watermarks or stamps into your documents.</p>
                 </div>
                 <div class="faq-card">
-                    <h4>Can I rotate only one page without affecting the others?</h4>
+                    <h3 class="legacy-h4">Can I rotate only one page without affecting the others?</h3>
                     <p>Yes! Every page thumbnail has independent ↶ and ↷ buttons, allowing you to rotate individual pages selectively.</p>
                 </div>
             </div>
@@ -226,14 +227,14 @@
     <div class="container">
         <div class="footer-inner">
             <div class="footer-brand">
-                <h4>PDFx Online Tools</h4>
+                <h2 class="legacy-h4">PDFx Online Tools</h2>
                 <p>
                     PDFx provides clean, privacy-first, browser-based utilities for managing, converting, and editing PDF files.
-                    All processing is conducted on the client side to keep your sensitive personal and business documents confidential.
+                    Document processing runs in your browser. Hosting, library providers, and advertising services may receive standard web requests.
                 </p>
             </div>
             <div class="footer-col">
-                <h5>PDF Utilities</h5>
+                <h3 class="legacy-h5">PDF Utilities</h3>
                 <ul>
                     <li><a href="jpg-to-pdf.html">JPG to PDF Converter</a></li>
                     <li><a href="pdf-to-jpg.html">PDF to JPG Converter</a></li>
@@ -245,7 +246,7 @@
                 </ul>
             </div>
             <div class="footer-col">
-                <h5>Company & Legal</h5>
+                <h3 class="legacy-h5">Company & Legal</h3>
                 <ul>
                     <li><a href="about.html">About PDFx</a></li>
                     <li><a href="faq.html">Help & FAQ</a></li>

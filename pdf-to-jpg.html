@@ -7,7 +7,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2662425279311804" crossorigin="anonymous"></script>
 
     <title>PDF to JPG Converter - Convert PDF Pages to Images Online Free | PDFx</title>
-    <meta name="description" content="Convert PDF documents to high quality JPG images online for free with PDFx. Extract individual pages or entire documents directly in your browser with 100% privacy.">
+    <meta name="description" content="Convert PDF documents to high quality JPG images online for free with PDFx. Extract individual pages or entire documents directly in your browser with local file processing.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://pdfx-website.vercel.app/pdf-to-jpg.html">
     <link rel="icon" type="image/png" href="pdfx-logo.png">
@@ -45,14 +45,14 @@
 <header class="site-header">
     <div class="container header-inner">
         <div class="brand-wrapper">
-            <a href="index.html" class="logo">
+            <a href="/" class="logo">
                 <img src="pdfx-logo.png" alt="PDFx logo" class="brand-logo">
                 <span class="brand-name">PDFx</span>
             </a>
             <span class="logo-text">Online PDF Tools</span>
         </div>
         <nav class="site-nav">
-            <a href="index.html">Home</a>
+            <a href="/">Home</a>
             <a href="jpg-to-pdf.html">JPG to PDF</a>
             <a href="pdf-to-jpg.html" class="active">PDF to JPG</a>
             <a href="merge-pdf.html">Merge</a>
@@ -69,9 +69,9 @@
 
 <div class="breadcrumb-section">
     <div class="container">
-        <a href="index.html">Home</a>
+        <a href="/">Home</a>
         <span>&rsaquo;</span>
-        <a href="index.html#tools">Tools</a>
+        <a href="/#tools">Tools</a>
         <span>&rsaquo;</span>
         <span class="current">PDF to JPG Converter</span>
     </div>
@@ -87,7 +87,7 @@
                 Extract crisp, high-resolution JPG pictures from any PDF file. Choose specific pages or export the entire document directly within your web browser.
             </p>
             <div class="badge-group">
-                <span class="badge">🔒 100% Client-Side Privacy</span>
+                <span class="badge">🔒 Local File Processing</span>
                 <span class="badge">📸 High-Resolution Rendering</span>
                 <span class="badge">📦 Download Single or ZIP Archive</span>
                 <span class="badge">⚡ Zero Cloud Uploads</span>
@@ -104,6 +104,7 @@
                 Select a PDF file from your device. You can click individual pages to convert only what you need, or click "Select All" to convert every page.
             </p>
 
+            <label class="sr-only" for="pdfJpgInput">Choose a PDF to convert to JPG images</label>
             <input type="file" id="pdfJpgInput" accept="application/pdf">
             <div class="small-actions">
                 <button id="selectAllJpgBtn" class="secondary-btn" disabled>Select All</button>
@@ -126,17 +127,17 @@
             <div class="steps-grid">
                 <div class="step-card">
                     <div class="step-number">1</div>
-                    <h4>Choose Your PDF</h4>
+                    <h3 class="legacy-h4">Choose Your PDF</h3>
                     <p>Click the upload field and select any PDF document stored on your laptop, desktop, or smartphone.</p>
                 </div>
                 <div class="step-card">
                     <div class="step-number">2</div>
-                    <h4>Pick Target Pages</h4>
+                    <h3 class="legacy-h4">Pick Target Pages</h3>
                     <p>PDFx generates thumbnail previews of each page. Select specific pages or click "Select All" to convert the entire document.</p>
                 </div>
                 <div class="step-card">
                     <div class="step-number">3</div>
-                    <h4>Export JPGs Instantly</h4>
+                    <h3 class="legacy-h4">Export JPGs Instantly</h3>
                     <p>Click "Convert Selected Pages". Your browser renders the pages onto high-definition canvases and initiates automatic download.</p>
                 </div>
             </div>
@@ -153,7 +154,7 @@
 
             <h3>How PDF.js and Canvas Ensure Pristine Image Quality</h3>
             <p>
-                PDFx utilizes Mozilla's industry-standard <strong>PDF.js</strong> rendering engine combined with the HTML5 Canvas API. When you load a document, our software parses the vector paths, typography fonts, embedded images, and color matrices inside the PDF. Each page is drawn onto a dedicated high-DPI virtual canvas, ensuring that fine text lines, mathematical formulas, and photography remain sharp without blurriness.
+                PDFx utilizes Mozilla's industry-standard <strong>PDF.js</strong> rendering engine combined with the HTML5 Canvas API. When you load a document, our software parses the vector paths, typography fonts, embedded images, and color matrices inside the PDF. Each selected page is drawn onto a canvas at scale 1.5, then encoded as a JPG image. Small text and graphics may lose detail during rasterization and compression.
             </p>
 
             <h3>Why Local Browser Processing Protects Your Sensitive Information</h3>
@@ -161,13 +162,13 @@
                 Bank statements, payslips, medical records, tax filings, and legal agreements are frequently formatted as PDFs. Uploading these documents to random third-party web services exposes your confidential data to data breaches, scraping, and unauthorized server storage.
             </p>
             <p>
-                With PDFx, your document never leaves your machine. The rendering, image encoding, and ZIP file compilation take place entirely within your browser's isolated sandbox memory. No copies or logs are ever made on remote servers.
+                PDFx renders pages, encodes JPG images, and creates the ZIP archive in your browser without uploading the document for conversion. Hosting, CDN, and advertising requests may still be logged separately.
             </p>
 
             <div class="callout-box">
-                <h4>Smart Packaging: Single Image or ZIP Archive</h4>
+                <h3 class="legacy-h4">ZIP Download for Any Selection</h3>
                 <p>
-                    When you convert a single page, PDFx conveniently downloads a single ready-to-use <code>.jpg</code> file. When converting multiple pages, PDFx automatically bundles them into an organized <code>.zip</code> file using client-side JSZip for convenient extraction.
+                    PDFx downloads a <code>.zip</code> archive containing the selected pages as <code>.jpg</code> files, including when you select just one page. Extract the archive to access the images.
                 </p>
             </div>
 
@@ -189,28 +190,28 @@
 
             <div class="faq-grid">
                 <div class="faq-card">
-                    <h4>Can I convert only specific pages instead of the whole file?</h4>
+                    <h3 class="legacy-h4">Can I convert only specific pages instead of the whole file?</h3>
                     <p>Yes! Simply click the thumbnails of the specific pages you wish to export. Only the highlighted pages will be converted into JPG images.</p>
                 </div>
                 <div class="faq-card">
-                    <h4>What resolution are the extracted JPG images?</h4>
-                    <p>PDFx renders each page at high resolution (up to 2x display ratio), ensuring that typography, tables, and graphics remain crisp and easily readable.</p>
+                    <h3 class="legacy-h4">What resolution are the extracted JPG images?</h3>
+                    <p>PDFx renders each page at a scale of 1.5 relative to its PDF dimensions and encodes JPG at a quality setting of 0.92. Pixel dimensions depend on the source page size. JPG uses lossy compression; this renders full pages rather than extracting original embedded images.</p>
                 </div>
                 <div class="faq-card">
-                    <h4>Are my converted files uploaded to a remote database?</h4>
+                    <h3 class="legacy-h4">Are my converted files uploaded to a remote database?</h3>
                     <p>No. All rendering and conversion takes place entirely inside your web browser. Neither your PDF nor the resulting JPG files are transmitted to any server.</p>
                 </div>
                 <div class="faq-card">
-                    <h4>What if my PDF has dozens of pages?</h4>
+                    <h3 class="legacy-h4">What if my PDF has dozens of pages?</h3>
                     <p>PDFx can handle large multi-page PDFs. When exporting multiple pages, it creates a clean ZIP archive so you can download all images in one click.</p>
                 </div>
                 <div class="faq-card">
-                    <h4>Can PDFx convert password-protected PDFs?</h4>
+                    <h3 class="legacy-h4">Can PDFx convert password-protected PDFs?</h3>
                     <p>PDFx currently processes unencrypted PDF documents. If your PDF has an open password, unlock it before converting.</p>
                 </div>
                 <div class="faq-card">
-                    <h4>Is there any cost or watermarking involved?</h4>
-                    <p>No. The PDFx PDF to JPG converter is 100% free forever and never adds watermarks or branding to your images.</p>
+                    <h3 class="legacy-h4">Is there any cost or watermarking involved?</h3>
+                    <p>No. The PDFx PDF to JPG converter is free to use and never adds watermarks or branding to your images.</p>
                 </div>
             </div>
 
@@ -231,14 +232,14 @@
     <div class="container">
         <div class="footer-inner">
             <div class="footer-brand">
-                <h4>PDFx Online Tools</h4>
+                <h2 class="legacy-h4">PDFx Online Tools</h2>
                 <p>
                     PDFx provides clean, privacy-first, browser-based utilities for managing, converting, and editing PDF files.
-                    All processing is conducted on the client side to keep your sensitive personal and business documents confidential.
+                    Document processing runs in your browser. Hosting, library providers, and advertising services may receive standard web requests.
                 </p>
             </div>
             <div class="footer-col">
-                <h5>PDF Utilities</h5>
+                <h3 class="legacy-h5">PDF Utilities</h3>
                 <ul>
                     <li><a href="jpg-to-pdf.html">JPG to PDF Converter</a></li>
                     <li><a href="pdf-to-jpg.html">PDF to JPG Converter</a></li>
@@ -250,7 +251,7 @@
                 </ul>
             </div>
             <div class="footer-col">
-                <h5>Company & Legal</h5>
+                <h3 class="legacy-h5">Company & Legal</h3>
                 <ul>
                     <li><a href="about.html">About PDFx</a></li>
                     <li><a href="faq.html">Help & FAQ</a></li>

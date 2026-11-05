@@ -1,4 +1,4 @@
- /* PDF.JS WORKER */
+/* PDF.JS WORKER */
 
 if (typeof pdfjsLib !== "undefined") {
 
@@ -137,6 +137,7 @@ function renderImagePreview() {
             const img =
                 document.createElement("img");
 
+            img.alt = "Image " + (index + 1) + ": " + file.name;
             img.src = URL.createObjectURL(file);
             applyRotationClass(img, imageRotations[index] || 0);
 
@@ -1194,6 +1195,7 @@ async function renderPdfPageThumbnail(
     const img =
         document.createElement("img");
 
+    img.alt = "Preview of PDF page " + pageNumber;
     img.src =
         canvas.toDataURL(
             "image/jpeg",
@@ -2272,6 +2274,7 @@ function renderRearrangePreview() {
                     "img"
                 );
 
+            img.alt = "Preview of source PDF page " + pageInfo.pageNumber;
             img.src =
                 pageInfo.dataUrl;
 
@@ -2472,7 +2475,17 @@ if (rearrangeBtn) rearrangeBtn.addEventListener(
 
 
             copied.forEach(
-                function(page) {
+                function(page, index) {
+                    // The preview rotation is relative to the original PDF page.
+                    // Match the reordered item to the copied page before applying it.
+                    page.setRotation(
+                        PDFLib.degrees(
+                            normalizeRotation(
+                                page.getRotation().angle +
+                                rearrangePages[index].rotation
+                            )
+                        )
+                    );
                     newPdf.addPage(page);
                 }
             );
@@ -2913,6 +2926,10 @@ async function renderExtendPreview() {
 
         }
 
+
+        img.alt = data.type === "pdf"
+            ? "Preview of source PDF page " + data.pageNumber
+            : "Added image: " + data.file.name;
 
         applyRotationClass(
             img,

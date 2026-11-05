@@ -7,7 +7,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2662425279311804" crossorigin="anonymous"></script>
 
     <title>Delete PDF Pages - Remove Pages from PDF Online Free | PDFx</title>
-    <meta name="description" content="Remove unwanted, blank, or duplicate pages from your PDF documents online for free with PDFx. 100% private in-browser tool with zero server uploads.">
+    <meta name="description" content="Remove unwanted, blank, or duplicate pages from your PDF documents online for free with PDFx. browser-based in-browser tool with zero server uploads.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://pdfx-website.vercel.app/delete-pdf-pages.html">
     <link rel="icon" type="image/png" href="pdfx-logo.png">
@@ -45,14 +45,14 @@
 <header class="site-header">
     <div class="container header-inner">
         <div class="brand-wrapper">
-            <a href="index.html" class="logo">
+            <a href="/" class="logo">
                 <img src="pdfx-logo.png" alt="PDFx logo" class="brand-logo">
                 <span class="brand-name">PDFx</span>
             </a>
             <span class="logo-text">Online PDF Tools</span>
         </div>
         <nav class="site-nav">
-            <a href="index.html">Home</a>
+            <a href="/">Home</a>
             <a href="jpg-to-pdf.html">JPG to PDF</a>
             <a href="pdf-to-jpg.html">PDF to JPG</a>
             <a href="merge-pdf.html">Merge</a>
@@ -69,9 +69,9 @@
 
 <div class="breadcrumb-section">
     <div class="container">
-        <a href="index.html">Home</a>
+        <a href="/">Home</a>
         <span>&rsaquo;</span>
-        <a href="index.html#tools">Tools</a>
+        <a href="/#tools">Tools</a>
         <span>&rsaquo;</span>
         <span class="current">Delete PDF Pages</span>
     </div>
@@ -88,7 +88,7 @@
                 Select pages visually and instantly generate a streamlined PDF file right in your browser.
             </p>
             <div class="badge-group">
-                <span class="badge">🔒 100% Client-Side Privacy</span>
+                <span class="badge">🔒 Local File Processing</span>
                 <span class="badge">🗑️ Visual Page Deletion</span>
                 <span class="badge">✨ Maintains Document Layout</span>
                 <span class="badge">⚡ Zero Cloud Uploads</span>
@@ -105,6 +105,7 @@
                 Select a PDF file from your device. Click on the pages you want to eliminate from the document, then click the button below.
             </p>
 
+            <label class="sr-only" for="deleteInput">Choose a PDF to remove pages from</label>
             <input type="file" id="deleteInput" accept="application/pdf">
             <div id="deletePreview" class="preview-grid"></div>
             <button id="deleteBtn" class="primary-btn" disabled>Delete Selected Pages</button>
@@ -123,17 +124,17 @@
             <div class="steps-grid">
                 <div class="step-card">
                     <div class="step-number">1</div>
-                    <h4>Select Your PDF</h4>
+                    <h3 class="legacy-h4">Select Your PDF</h3>
                     <p>Click the file selection button and pick your PDF. The tool displays thumbnail previews for each page in order.</p>
                 </div>
                 <div class="step-card">
                     <div class="step-number">2</div>
-                    <h4>Mark Pages to Delete</h4>
+                    <h3 class="legacy-h4">Mark Pages to Delete</h3>
                     <p>Click on each page you wish to remove. Selected pages are clearly highlighted for verification.</p>
                 </div>
                 <div class="step-card">
                     <div class="step-number">3</div>
-                    <h4>Download Refined File</h4>
+                    <h3 class="legacy-h4">Download Refined File</h3>
                     <p>Click "Delete Selected Pages". PDFx strips the selected pages and downloads your updated PDF instantly.</p>
                 </div>
             </div>
@@ -158,11 +159,11 @@
                 Removing pages is often done to scrub sensitive financial data, private personal identifiers, or confidential client names before sharing a document externally. When using conventional online tools, the entire original document—including the sensitive pages you intended to delete—is uploaded to an unknown server.
             </p>
             <p>
-                PDFx guarantees 100% privacy because no file data is ever transmitted across the internet. The unwanted pages are purged locally inside your browser memory before the final file is saved.
+                PDFx creates a new PDF from the retained pages locally without uploading the document for processing. Deleting pages is not secure redaction of information elsewhere in a file; inspect the output before sharing.
             </p>
 
             <div class="callout-box">
-                <h4>Perfect for Scanned Documents & Invoices</h4>
+                <h3 class="legacy-h4">Perfect for Scanned Documents & Invoices</h3>
                 <p>
                     Automatic document feeder (ADF) scanners often accidentally scan blank reverse sides of receipts or invoices. PDFx lets you spot and remove those blank pages in seconds.
                 </p>
@@ -186,27 +187,27 @@
 
             <div class="faq-grid">
                 <div class="faq-card">
-                    <h4>Can I delete multiple pages at once?</h4>
-                    <p>Yes. You can select as many pages as you want to remove across the entire document in a single session.</p>
+                    <h3 class="legacy-h4">Can I delete multiple pages at once?</h3>
+                    <p>You can mark multiple pages for removal in one session, but must keep at least one page to create the resulting PDF.</p>
                 </div>
                 <div class="faq-card">
-                    <h4>Will deleting pages mess up the remaining page numbers?</h4>
-                    <p>No. The PDF page tree is automatically updated and re-indexed so the remaining pages follow in perfect sequential order.</p>
+                    <h3 class="legacy-h4">Will deleting pages mess up the remaining page numbers?</h3>
+                    <p>The retained pages are placed in their original order in the new PDF. Page numbers printed within the page content are not rewritten.</p>
                 </div>
                 <div class="faq-card">
-                    <h4>Is my original file modified or overwritten?</h4>
+                    <h3 class="legacy-h4">Is my original file modified or overwritten?</h3>
                     <p>No. Your original file remains untouched on your computer. PDFx generates a brand new cleaned PDF file for download.</p>
                 </div>
                 <div class="faq-card">
-                    <h4>Are my deleted pages stored on your servers?</h4>
-                    <p>Never. PDFx runs 100% inside your browser. No pages or document data are ever transferred to external servers.</p>
+                    <h3 class="legacy-h4">Are my deleted pages stored on your servers?</h3>
+                    <p>The tool does not upload document contents for processing. Hosting, CDN, and advertising services may receive standard web requests.</p>
                 </div>
                 <div class="faq-card">
-                    <h4>Can I undo my selection before downloading?</h4>
+                    <h3 class="legacy-h4">Can I undo my selection before downloading?</h3>
                     <p>Yes. Simply click a selected thumbnail again to deselect it before clicking "Delete Selected Pages".</p>
                 </div>
                 <div class="faq-card">
-                    <h4>Is there any cost or subscription needed?</h4>
+                    <h3 class="legacy-h4">Is there any cost or subscription needed?</h3>
                     <p>No. All tools on PDFx are free to use without limits, subscriptions, or watermarks.</p>
                 </div>
             </div>
@@ -228,14 +229,14 @@
     <div class="container">
         <div class="footer-inner">
             <div class="footer-brand">
-                <h4>PDFx Online Tools</h4>
+                <h2 class="legacy-h4">PDFx Online Tools</h2>
                 <p>
                     PDFx provides clean, privacy-first, browser-based utilities for managing, converting, and editing PDF files.
-                    All processing is conducted on the client side to keep your sensitive personal and business documents confidential.
+                    Document processing runs in your browser. Hosting, library providers, and advertising services may receive standard web requests.
                 </p>
             </div>
             <div class="footer-col">
-                <h5>PDF Utilities</h5>
+                <h3 class="legacy-h5">PDF Utilities</h3>
                 <ul>
                     <li><a href="jpg-to-pdf.html">JPG to PDF Converter</a></li>
                     <li><a href="pdf-to-jpg.html">PDF to JPG Converter</a></li>
@@ -247,7 +248,7 @@
                 </ul>
             </div>
             <div class="footer-col">
-                <h5>Company & Legal</h5>
+                <h3 class="legacy-h5">Company & Legal</h3>
                 <ul>
                     <li><a href="about.html">About PDFx</a></li>
                     <li><a href="faq.html">Help & FAQ</a></li>

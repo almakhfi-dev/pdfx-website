@@ -7,7 +7,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2662425279311804" crossorigin="anonymous"></script>
 
     <title>PDF Extend - Add Images & Pages to PDF Online Free | PDFx</title>
-    <meta name="description" content="Add new JPG and PNG pages directly into an existing PDF document online for free with PDFx. Reorder pages and extend your PDF with 100% client-side privacy.">
+    <meta name="description" content="Add new JPG and PNG pages directly into an existing PDF document online for free with PDFx. Reorder pages and extend your PDF with local file processing.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://pdfx-website.vercel.app/pdf-extend.html">
     <link rel="icon" type="image/png" href="pdfx-logo.png">
@@ -45,14 +45,14 @@
 <header class="site-header">
     <div class="container header-inner">
         <div class="brand-wrapper">
-            <a href="index.html" class="logo">
+            <a href="/" class="logo">
                 <img src="pdfx-logo.png" alt="PDFx logo" class="brand-logo">
                 <span class="brand-name">PDFx</span>
             </a>
             <span class="logo-text">Online PDF Tools</span>
         </div>
         <nav class="site-nav">
-            <a href="index.html">Home</a>
+            <a href="/">Home</a>
             <a href="jpg-to-pdf.html">JPG to PDF</a>
             <a href="pdf-to-jpg.html">PDF to JPG</a>
             <a href="merge-pdf.html">Merge</a>
@@ -69,9 +69,9 @@
 
 <div class="breadcrumb-section">
     <div class="container">
-        <a href="index.html">Home</a>
+        <a href="/">Home</a>
         <span>&rsaquo;</span>
-        <a href="index.html#tools">Tools</a>
+        <a href="/#tools">Tools</a>
         <span>&rsaquo;</span>
         <span class="current">PDF Extend</span>
     </div>
@@ -85,10 +85,10 @@
             <h1>PDF Extend Online Free</h1>
             <p>
                 Add new image pages (receipts, scans, signed forms) directly into your existing PDF file.
-                Reorganize page placement with drag-and-drop and download with 100% private in-browser processing.
+                Reorganize page placement with drag-and-drop and download with local in-browser processing.
             </p>
             <div class="badge-group">
-                <span class="badge">🔒 100% Client-Side Privacy</span>
+                <span class="badge">🔒 Local File Processing</span>
                 <span class="badge">➕ Insert JPG & PNG Pages</span>
                 <span class="badge">🖐️ Intuitive Drag & Drop</span>
                 <span class="badge">⚡ Zero Cloud Uploads</span>
@@ -105,9 +105,11 @@
                 Select an existing PDF file from your device, then click "+ Add JPG / PNG Pages" to insert new image pages anywhere in the document.
             </p>
 
+            <label class="sr-only" for="extendPdfInput">Choose a PDF to add image pages to</label>
             <input type="file" id="extendPdfInput" accept="application/pdf">
             <div id="extendPreview" class="preview-grid"></div>
             <button id="extendAddBtn" class="secondary-btn extend-add-btn" disabled>+ Add JPG / PNG Pages</button>
+            <label class="sr-only" for="extendImageInput">Choose JPG or PNG images to add as PDF pages</label>
             <input type="file" id="extendImageInput" accept="image/jpeg,image/png" multiple hidden>
             <p class="drag-hint">Drag pages to change their order. Use ↶ / ↷ to rotate.</p>
             <button id="extendBtn" class="primary-btn" disabled>Extend PDF</button>
@@ -126,17 +128,17 @@
             <div class="steps-grid">
                 <div class="step-card">
                     <div class="step-number">1</div>
-                    <h4>Choose Existing PDF</h4>
+                    <h3 class="legacy-h4">Choose Existing PDF</h3>
                     <p>Select your original PDF file. PDFx parses and displays its existing pages in the visual grid.</p>
                 </div>
                 <div class="step-card">
                     <div class="step-number">2</div>
-                    <h4>Add & Position Images</h4>
+                    <h3 class="legacy-h4">Add & Position Images</h3>
                     <p>Click "+ Add JPG / PNG Pages" to load photos or scans. Drag them to your preferred placement in the document.</p>
                 </div>
                 <div class="step-card">
                     <div class="step-number">3</div>
-                    <h4>Generate & Download</h4>
+                    <h3 class="legacy-h4">Generate & Download</h3>
                     <p>Click "Extend PDF". Your browser merges the original pages and new images into a cohesive PDF file.</p>
                 </div>
             </div>
@@ -153,7 +155,7 @@
 
             <h3>Seamless Image Embedding with PDF-Lib</h3>
             <p>
-                PDFx solves this problem with the <strong>PDF Extend</strong> tool. Built directly on top of <strong>PDF-Lib</strong>, PDF Extend loads your original PDF document losslessly, analyzes the aspect ratio and resolution of your added JPG or PNG images, creates properly proportioned new pages, and embeds the image binary streams natively.
+                PDFx solves this problem with the <strong>PDF Extend</strong> tool. Built directly on top of <strong>PDF-Lib</strong>, PDF Extend copies existing PDF pages and adds images as new A4 pages. Added images are resized to a maximum edge of 1700 pixels and JPEG-compressed, with transparent areas placed on white. It does not overlay images on existing PDF pages.
             </p>
 
             <h3>Complete Privacy for Important Documentation</h3>
@@ -161,11 +163,11 @@
                 Appending ID cards, utility bills, or signed signature pages involves sensitive personally identifiable information (PII). Uploading these records to unverified remote web servers poses serious identity theft and security concerns.
             </p>
             <p>
-                With PDFx, all image embedding and PDF extension take place strictly in your browser's private local environment. Your files are never sent across the internet, ensuring 100% confidentiality.
+                With PDFx, all image embedding and PDF extension take place strictly in your browser's private local environment. The tool does not upload document contents for processing. Standard website, library, and advertising requests may still occur.
             </p>
 
             <div class="callout-box">
-                <h4>Flexible Page Ordering</h4>
+                <h3 class="legacy-h4">Flexible Page Ordering</h3>
                 <p>
                     You are not restricted to appending new pages to the end of your document. Thanks to our drag-and-drop preview system, you can insert new sheets at the beginning, between pages 3 and 4, or anywhere else you need.
                 </p>
@@ -189,27 +191,27 @@
 
             <div class="faq-grid">
                 <div class="faq-card">
-                    <h4>What image formats can I add to my PDF?</h4>
+                    <h3 class="legacy-h4">What image formats can I add to my PDF?</h3>
                     <p>You can add standard JPG, JPEG, and PNG image files. PDFx embeds them cleanly as new PDF pages.</p>
                 </div>
                 <div class="faq-card">
-                    <h4>Can I add multiple images at the same time?</h4>
+                    <h3 class="legacy-h4">Can I add multiple images at the same time?</h3>
                     <p>Yes. You can select multiple images at once and position them throughout your document.</p>
                 </div>
                 <div class="faq-card">
-                    <h4>Are my files sent to any remote server?</h4>
-                    <p>No. All rendering, page generation, and image embedding take place directly in your browser with 100% client-side privacy.</p>
+                    <h3 class="legacy-h4">Are my files sent to any remote server?</h3>
+                    <p>No. All rendering, page generation, and image embedding take place directly in your browser with local file processing.</p>
                 </div>
                 <div class="faq-card">
-                    <h4>Will extending damage my original PDF formatting?</h4>
+                    <h3 class="legacy-h4">Will extending damage my original PDF formatting?</h3>
                     <p>No. The original vector paths, fonts, and layouts remain untouched. New pages are cleanly integrated into the document hierarchy.</p>
                 </div>
                 <div class="faq-card">
-                    <h4>Can I rotate the newly added images?</h4>
+                    <h3 class="legacy-h4">Can I rotate the newly added images?</h3>
                     <p>Yes. Each thumbnail has ↶ and ↷ buttons, allowing you to rotate new images to match the document orientation.</p>
                 </div>
                 <div class="faq-card">
-                    <h4>Is there any cost or subscription fee?</h4>
+                    <h3 class="legacy-h4">Is there any cost or subscription fee?</h3>
                     <p>No. PDFx is 100% free with no registration, no subscription fees, and no watermarks.</p>
                 </div>
             </div>
@@ -231,14 +233,14 @@
     <div class="container">
         <div class="footer-inner">
             <div class="footer-brand">
-                <h4>PDFx Online Tools</h4>
+                <h2 class="legacy-h4">PDFx Online Tools</h2>
                 <p>
                     PDFx provides clean, privacy-first, browser-based utilities for managing, converting, and editing PDF files.
-                    All processing is conducted on the client side to keep your sensitive personal and business documents confidential.
+                    Document processing runs in your browser. Hosting, library providers, and advertising services may receive standard web requests.
                 </p>
             </div>
             <div class="footer-col">
-                <h5>PDF Utilities</h5>
+                <h3 class="legacy-h5">PDF Utilities</h3>
                 <ul>
                     <li><a href="jpg-to-pdf.html">JPG to PDF Converter</a></li>
                     <li><a href="pdf-to-jpg.html">PDF to JPG Converter</a></li>
@@ -250,7 +252,7 @@
                 </ul>
             </div>
             <div class="footer-col">
-                <h5>Company & Legal</h5>
+                <h3 class="legacy-h5">Company & Legal</h3>
                 <ul>
                     <li><a href="about.html">About PDFx</a></li>
                     <li><a href="faq.html">Help & FAQ</a></li>
