@@ -1805,11 +1805,17 @@ if (splitBtn) splitBtn.addEventListener(
             !splitFile ||
             selectedSplitPages.size === 0
         ) {
+            setStatus("splitStatus", "Select at least one page to create a PDF.");
             return;
         }
 
 
         try {
+
+            setStatus(
+                "splitStatus",
+                "Creating PDF..."
+            );
 
             const sourceBytes =
                 await splitFile.arrayBuffer();
@@ -1848,18 +1854,10 @@ if (splitBtn) splitBtn.addEventListener(
                 );
 
 
+            // Copy selected pages directly; Split has no rearrange rotation state.
+            // copyPages preserves each source page's existing rotation.
             copied.forEach(
-                function(page, index) {
-                    const info = rearrangePages[index];
-                    const originalRotation = page.getRotation().angle || 0;
-                    const extraRotation = info.rotation || 0;
-                    page.setRotation(
-                        PDFLib.degrees(
-                            normalizeRotation(
-                                originalRotation + extraRotation
-                            )
-                        )
-                    );
+                function(page) {
                     newPdf.addPage(page);
                 }
             );
@@ -1888,10 +1886,16 @@ if (splitBtn) splitBtn.addEventListener(
                 ".pdf"
             );
 
+            setStatus(
+                "splitStatus",
+                "PDF created successfully."
+            );
+
 
         } catch (error) {
 
             console.error(error);
+            setStatus("splitStatus", "Could not create PDF. Please try again.");
 
         }
 
