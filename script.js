@@ -1,4 +1,4 @@
-/* PDF.JS WORKER */
+ /* PDF.JS WORKER */
 
 if (typeof pdfjsLib !== "undefined") {
 
