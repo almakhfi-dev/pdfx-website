@@ -882,7 +882,7 @@ footer {
     padding-top: 25px;
     text-align: center;
     font-size: 13px;
-    color: #64748b;
+    color: #94a3b8;
 }
 
 /* =========================================================
@@ -950,3 +950,19 @@ footer {
     white-space: nowrap;
     border: 0;
 }
+
+.skip-link { position: absolute; left: 1rem; top: 1rem; z-index: 100; padding: .65rem 1rem; background: #fff; color: #111; transform: translateY(-200%); }
+.skip-link:focus { transform: none; }
+:focus-visible { outline: 3px solid #2563eb; outline-offset: 3px; }
+.reading-page { max-width: 52rem; padding-block: 2rem; }
+.reading-page li + li, .reading-page details + details { margin-top: .6rem; }
+.reading-page ol, .reading-page ul { padding-inline-start: 1.5rem; }
+.reading-page :is(p, li) a:not(.android-btn) { text-decoration: underline; text-underline-offset: .15em; }
+.hero-actions { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 1rem; }
+.hero-actions > a:last-child { color: inherit; }
+.tool-card, #tools { scroll-margin-top: 9rem; }
+.guide-list li { padding-block: .5rem; }
+
+
+.page-select-btn { display: block; width: 100%; min-height: 2.5rem; border: 1px solid #cbd5e1; border-radius: .4rem; background: #fff; color: #172554; cursor: pointer; }
+.page-select-btn[aria-pressed="true"] { background: #172554; color: #fff; }

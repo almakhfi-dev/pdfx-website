@@ -9,14 +9,14 @@
     <meta name="google-site-verification" content="ug3aUQT3nsBUwNhjiHDNPHZkwfrBD-J6woC_c37uwMA">
 
     <title>PDFx - Free Online PDF Tools | Convert, Merge, Split & Edit PDF</title>
-    <meta name="description" content="PDFx is a private, free online PDF suite. Convert JPG to PDF, PDF to JPG, merge multiple PDFs, split pages, delete pages, rearrange and extend documents directly inside your browser.">
+    <meta name="description" content="Use seven free PDF tools in your browser. Convert JPG and PNG, export PDF pages as images, or merge, extract, delete, rearrange and insert pages.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://pdfx-website.vercel.app/">
     <link rel="icon" type="image/png" href="pdfx-logo.png">
 
     <!-- Open Graph -->
     <meta property="og:title" content="PDFx - Free Online PDF Tools">
-    <meta property="og:description" content="100% free, private in-browser PDF utilities: Convert images, merge, split, delete and rearrange PDF pages safely without uploading files to remote servers.">
+    <meta property="og:description" content="Use seven free PDF tools in your browser. Convert JPG and PNG, export PDF pages as images, or merge, extract, delete, rearrange and insert pages.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pdfx-website.vercel.app/">
     <meta property="og:image" content="https://pdfx-website.vercel.app/pdfx-logo.png">
@@ -25,7 +25,7 @@
     <!-- Twitter -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="PDFx - Free Online PDF Tools">
-    <meta name="twitter:description" content="100% client-side free online PDF tools. Convert JPG to PDF, PDF to JPG, merge, split, delete and reorder pages securely.">
+    <meta name="twitter:description" content="Free browser-based tools for converting images and organizing PDF pages.">
     <meta name="twitter:image" content="https://pdfx-website.vercel.app/pdfx-logo.png">
 
     <!-- Structured Data -->
@@ -51,6 +51,7 @@
 </head>
 
 <body>
+<a class="skip-link" href="#main-content">Skip to content</a>
 
 <header class="site-header">
     <div class="container header-inner">
@@ -61,7 +62,7 @@
             </a>
             <span class="logo-text">Online PDF Tools</span>
         </div>
-        <nav class="site-nav">
+        <nav class="site-nav" aria-label="Main navigation">
             <a href="/" class="active">Home</a>
             <a href="jpg-to-pdf.html">JPG to PDF</a>
             <a href="pdf-to-jpg.html">PDF to JPG</a>
@@ -71,28 +72,21 @@
             <a href="rearrange-pdf.html">Rearrange</a>
             <a href="pdf-extend.html">Extend</a>
             <a href="about.html">About</a>
+            <a href="/guides.html">Guides</a>
             <a href="faq.html">FAQ</a>
             <a href="contact.html">Contact</a>
         </nav>
     </div>
 </header>
 
-<main>
+<main id="main-content" tabindex="-1">
 
     <!-- HERO -->
     <section class="hero">
         <div class="container">
-            <h1>Fast, Private & Free Online PDF Tools</h1>
-            <p>
-                PDFx gives you a complete set of everyday PDF utilities directly in your web browser.
-                Process, convert, merge, and organize your documents without uploading files to remote servers.
-            </p>
-            <div class="badge-group">
-                <span class="badge">🔒 Local File Processing</span>
-                <span class="badge">⚡ Zero Server Uploads</span>
-                <span class="badge">✨ Free & No Registration</span>
-                <span class="badge">📱 Works on Desktop & Mobile</span>
-            </div>
+            <h1>Free PDF tools for your browser</h1>
+            <p>Convert, combine or organize PDF files without creating an account. Your browser processes the documents you select.</p>
+            <p class="hero-actions"><a class="android-btn" href="#tools">Choose a tool</a> <a href="/guides.html">Read the guides</a></p>
         </div>
     </section>
 
@@ -101,9 +95,10 @@
         <div class="container">
             <div class="section-header">
                 <h2 id="tools">All PDF Tools</h2>
-                <p>Select any tool below to begin processing your documents instantly. All calculations run locally in your browser.</p>
+                <p>Choose a tool and select the files it asks for. Each tool downloads a new copy.</p>
             </div>
 
+            <noscript><p>Enable JavaScript to process files. Written instructions are available below.</p></noscript>
             <div class="tools-grid">
 
                 <!-- JPG TO PDF -->
@@ -111,18 +106,16 @@
                     <div class="tool-icon">🖼️</div>
                     <div class="tool-header-link">
                         <h3>JPG / PNG to PDF</h3>
-                        <a href="jpg-to-pdf.html">Full Guide &rarr;</a>
+                        <a href="jpg-to-pdf.html">Instructions</a>
                     </div>
-                    <p class="tool-desc">
-                        Convert multiple JPG, JPEG, and PNG images into a clean, unified PDF document. Reorder and rotate images as needed.
-                    </p>
+                    <p class="tool-desc">Combine worksheet or receipt photos into one PDF. Arrange and rotate the images before export.</p>
 
                     <label class="sr-only" for="imageInput">Choose JPG or PNG images to convert to PDF</label>
-            <input type="file" id="imageInput" accept="image/jpeg,image/png" multiple>
+                    <input type="file" id="imageInput" accept="image/jpeg,image/png" multiple>
                     <div id="imagePreview" class="preview-grid"></div>
                     <p class="drag-hint">Drag images to reorder. Use ↶ / ↷ to rotate orientation.</p>
                     <button id="convertImageBtn" class="primary-btn" disabled>Convert Images to PDF</button>
-                    <div id="imageStatus" class="status"></div>
+                    <div id="imageStatus" class="status" role="status"></div>
                 </div>
 
                 <!-- PDF TO JPG -->
@@ -130,21 +123,19 @@
                     <div class="tool-icon">📄</div>
                     <div class="tool-header-link">
                         <h3>PDF to JPG</h3>
-                        <a href="pdf-to-jpg.html">Full Guide &rarr;</a>
+                        <a href="pdf-to-jpg.html">Instructions</a>
                     </div>
-                    <p class="tool-desc">
-                        Extract and render high-resolution JPG images from individual or all pages of your PDF document.
-                    </p>
+                    <p class="tool-desc">Export a slide or diagram from a PDF. Selected pages download as JPG images in a ZIP archive.</p>
 
                     <label class="sr-only" for="pdfJpgInput">Choose a PDF to convert to JPG images</label>
-            <input type="file" id="pdfJpgInput" accept="application/pdf">
+                    <input type="file" id="pdfJpgInput" accept="application/pdf">
                     <div class="small-actions">
                         <button id="selectAllJpgBtn" class="secondary-btn" disabled>Select All</button>
                         <button id="clearJpgBtn" class="secondary-btn" disabled>Clear Selection</button>
                     </div>
                     <div id="pdfJpgPreview" class="preview-grid"></div>
                     <button id="convertJpgBtn" class="primary-btn" disabled>Convert Selected Pages</button>
-                    <div id="pdfJpgStatus" class="status"></div>
+                    <div id="pdfJpgStatus" class="status" role="status"></div>
                 </div>
 
                 <!-- MERGE PDF -->
@@ -152,17 +143,15 @@
                     <div class="tool-icon">📚</div>
                     <div class="tool-header-link">
                         <h3>Merge PDF</h3>
-                        <a href="merge-pdf.html">Full Guide &rarr;</a>
+                        <a href="merge-pdf.html">Instructions</a>
                     </div>
-                    <p class="tool-desc">
-                        Combine multiple PDF files into one organized document. Keeps page numbering and original layout intact.
-                    </p>
+                    <p class="tool-desc">Combine a report and its appendices. Select at least two PDFs and check the displayed file order.</p>
 
                     <label class="sr-only" for="mergeInput">Choose PDF files to merge</label>
-            <input type="file" id="mergeInput" accept="application/pdf" multiple>
+                    <input type="file" id="mergeInput" accept="application/pdf" multiple>
                     <div id="mergePreview" class="file-list"></div>
                     <button id="mergeBtn" class="primary-btn" disabled>Merge PDF Files</button>
-                    <div id="mergeStatus" class="status"></div>
+                    <div id="mergeStatus" class="status" role="status"></div>
                 </div>
 
                 <!-- SPLIT PDF -->
@@ -170,17 +159,15 @@
                     <div class="tool-icon">✂️</div>
                     <div class="tool-header-link">
                         <h3>Split PDF</h3>
-                        <a href="split-pdf.html">Full Guide &rarr;</a>
+                        <a href="split-pdf.html">Instructions</a>
                     </div>
-                    <p class="tool-desc">
-                        Extract specific pages from a PDF document to generate an entirely new, smaller file containing only what you need.
-                    </p>
+                    <p class="tool-desc">Create one PDF containing the pages you select, such as a schedule from an event packet.</p>
 
                     <label class="sr-only" for="splitInput">Choose a PDF to extract pages from</label>
-            <input type="file" id="splitInput" accept="application/pdf">
+                    <input type="file" id="splitInput" accept="application/pdf">
                     <div id="splitPreview" class="preview-grid"></div>
                     <button id="splitBtn" class="primary-btn" disabled>Extract Selected Pages</button>
-                    <div id="splitStatus" class="status"></div>
+                    <div id="splitStatus" class="status" role="status"></div>
                 </div>
 
                 <!-- DELETE PDF PAGES -->
@@ -188,17 +175,15 @@
                     <div class="tool-icon">🗑️</div>
                     <div class="tool-header-link">
                         <h3>Delete PDF Pages</h3>
-                        <a href="delete-pdf-pages.html">Full Guide &rarr;</a>
+                        <a href="delete-pdf-pages.html">Instructions</a>
                     </div>
-                    <p class="tool-desc">
-                        Remove unwanted, blank, or sensitive pages from your PDF file and instantly download the updated document.
-                    </p>
+                    <p class="tool-desc">Remove a duplicate scan or an unused cover sheet. Pages you keep are saved in a separate PDF.</p>
 
                     <label class="sr-only" for="deleteInput">Choose a PDF to remove pages from</label>
-            <input type="file" id="deleteInput" accept="application/pdf">
+                    <input type="file" id="deleteInput" accept="application/pdf">
                     <div id="deletePreview" class="preview-grid"></div>
                     <button id="deleteBtn" class="primary-btn" disabled>Remove Selected Pages</button>
-                    <div id="deleteStatus" class="status"></div>
+                    <div id="deleteStatus" class="status" role="status"></div>
                 </div>
 
                 <!-- REARRANGE PDF -->
@@ -206,18 +191,16 @@
                     <div class="tool-icon">↕️</div>
                     <div class="tool-header-link">
                         <h3>Rearrange PDF</h3>
-                        <a href="rearrange-pdf.html">Full Guide &rarr;</a>
+                        <a href="rearrange-pdf.html">Instructions</a>
                     </div>
-                    <p class="tool-desc">
-                        Reorganize the order of pages inside your PDF with intuitive drag-and-drop. Rotate upside-down pages effortlessly.
-                    </p>
+                    <p class="tool-desc">Put scans into reading order and correct sideways pages before exporting a new PDF.</p>
 
                     <label class="sr-only" for="rearrangeInput">Choose a PDF to reorder or rotate pages</label>
-            <input type="file" id="rearrangeInput" accept="application/pdf">
+                    <input type="file" id="rearrangeInput" accept="application/pdf">
                     <div id="rearrangePreview" class="preview-grid"></div>
                     <p class="drag-hint">Drag thumbnails to rearrange. Click ↶ / ↷ to rotate.</p>
                     <button id="rearrangeBtn" class="primary-btn" disabled>Save Rearranged PDF</button>
-                    <div id="rearrangeStatus" class="status"></div>
+                    <div id="rearrangeStatus" class="status" role="status"></div>
                 </div>
 
                 <!-- PDF EXTEND -->
@@ -225,169 +208,49 @@
                     <div class="tool-icon">➕</div>
                     <div class="tool-header-link">
                         <h3>PDF Extend</h3>
-                        <a href="pdf-extend.html">Full Guide &rarr;</a>
+                        <a href="pdf-extend.html">Instructions</a>
                     </div>
-                    <p class="tool-desc">
-                        Insert new image pages (scans, receipts, forms) directly into an existing PDF document at any page position.
-                    </p>
+                    <p class="tool-desc">Insert JPG or PNG images before, between, or after pages in an existing PDF.</p>
 
                     <label class="sr-only" for="extendPdfInput">Choose a PDF to add image pages to</label>
-            <input type="file" id="extendPdfInput" accept="application/pdf">
+                    <input type="file" id="extendPdfInput" accept="application/pdf">
                     <div id="extendPreview" class="preview-grid"></div>
                     <button id="extendAddBtn" class="secondary-btn extend-add-btn" disabled>+ Add Image Pages (JPG/PNG)</button>
                     <label class="sr-only" for="extendImageInput">Choose JPG or PNG images to add as PDF pages</label>
-            <input type="file" id="extendImageInput" accept="image/jpeg,image/png" multiple hidden>
+                    <input type="file" id="extendImageInput" accept="image/jpeg,image/png" multiple hidden>
                     <p class="drag-hint">Drag items to organize page order. Rotate if needed.</p>
                     <button id="extendBtn" class="primary-btn" disabled>Generate Extended PDF</button>
-                    <div id="extendStatus" class="status"></div>
+                    <div id="extendStatus" class="status" role="status"></div>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <!-- WHY PDFx: PRIVACY BY DESIGN -->
     <section class="content-section">
-        <div class="container">
-            <h2>Why Choose PDFx? Private, Secure & Client-Side</h2>
-            <p>
-                Most online PDF services require you to upload your confidential files to their external servers.
-                This poses substantial privacy and security risks, particularly for legal contracts, medical reports,
-                financial statements, and personal identity documents.
+        <div class="container reading-page">
+            <h2>How PDFx works</h2>
+            <p>Choose a tool and select your local files. Preview or select pages where the tool offers that option, run the operation and open the downloaded copy to check it. You can use the tools without installing software or creating an account.</p>
+            <h2>What you can do with PDFx</h2>
+            <ul>
+            <li><strong>Students</strong> can combine photos of handwritten homework into one submission.</li>
+            <li><strong>Teachers</strong> can extract the answer sheet from a longer lesson packet.</li>
+            <li><strong>Office staff</strong> can merge a report and appendices in delivery order.</li>
+            <li><strong>Freelancers</strong> can add a photographed signature page to a project handoff.</li>
+            <li><strong>Small businesses</strong> can export selected catalog pages as images.</li>
+            <li><strong>Anyone sorting scans</strong> can reorder pages and correct sideways scans.</li>
+            </ul>
+            <h2>File privacy</h2>
+            <p>The tools read and generate documents in your browser. The site still loads processing libraries and advertising scripts over the network. Large scans can strain device memory. Read the <a href="/privacy.html">Privacy Policy</a> for details.</p>
+            <h2>Common questions</h2>
+            <details><summary>Where is my download?</summary>
+            <p>Check your browser’s download history or your Downloads folder. The PDF to JPG tool delivers images in a ZIP archive.</p>
+            </details>
+            <details><summary>Why did my file fail to open?</summary>
+            <p>Confirm that it opens in a local viewer and that the format matches the tool. For protected files, use an authorized unlocked copy.</p>
+            </details>
+            <p><a href="/faq.html">More PDFx questions</a> · <a href="/guides.html">PDF Guides &amp; Tutorials</a>
             </p>
-            <p>
-                <strong>PDFx is built differently:</strong> Our tools leverage modern browser APIs (such as HTML5 Canvas, and client-side JavaScript libraries including PDF-Lib and PDF.js). When you choose a file,
-                it is processed directly inside your browser's local sandbox memory.
-            </p>
-
-            <div class="features-grid">
-                <div class="feature-box">
-                    <div class="f-icon">🔒</div>
-                    <h3 class="legacy-h4">Local Document Processing</h3>
-                    <p>The conversion tools process document contents on your device without uploading them for processing.</p>
-                </div>
-                <div class="feature-box">
-                    <div class="f-icon">⚡</div>
-                    <h3 class="legacy-h4">Blazing Fast Execution</h3>
-                    <p>No document upload is required for conversion. Processing time depends on the file and your device.</p>
-                </div>
-                <div class="feature-box">
-                    <div class="f-icon">🛡️</div>
-                    <h3 class="legacy-h4">Privacy-First Architecture</h3>
-                    <p>The tools process selected documents locally. Standard hosting, library, and advertising requests are separate from document processing.</p>
-                </div>
-            </div>
-
-            <div class="callout-box">
-                <h3 class="legacy-h4">Your Files Remain Entirely Under Your Control</h3>
-                <p>
-                    File transformations run locally, while libraries and the PDF worker may require an internet connection to load. Reliable offline use is not currently supported.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- STEP BY STEP WORKFLOW GUIDE -->
-    <section class="content-section">
-        <div class="container">
-            <h2>How to Use PDFx Tools in 3 Simple Steps</h2>
-            <p>
-                We designed PDFx to be intuitive for students, educators, legal professionals, and businesses alike.
-                Follow this simple workflow for any document task:
-            </p>
-
-            <div class="steps-grid">
-                <div class="step-card">
-                    <div class="step-number">1</div>
-                    <h3 class="legacy-h4">Select Your Files</h3>
-                    <p>Choose your PDF documents or images from your computer or mobile device using the file selector.</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-number">2</div>
-                    <h3 class="legacy-h4">Customize & Organize</h3>
-                    <p>Reorder pages via drag-and-drop, rotate orientations, select specific sheets, or add complementary files.</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-number">3</div>
-                    <h3 class="legacy-h4">Download Instantly</h3>
-                    <p>Click the action button. Your browser compiles the output file in seconds with no watermark.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- TECHNICAL SPECIFICATIONS TABLE -->
-    <section class="content-section">
-        <div class="container">
-            <h2>Technical Specifications & Capabilities</h2>
-            <p>
-                Below is an overview of the supported file types, engine specifications, and operational parameters of PDFx:
-            </p>
-
-            <div class="table-wrapper">
-                <table class="specs-table">
-                    <thead>
-                        <tr>
-                            <th>Tool Name</th>
-                            <th>Supported Input Formats</th>
-                            <th>Output Format</th>
-                            <th>Processing Location</th>
-                            <th>Max Recommended Size</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>JPG to PDF</strong></td>
-                            <td>JPEG, JPG, PNG</td>
-                            <td>Standard PDF (.pdf)</td>
-                            <td>Client-side (in-browser)</td>
-                            <td>Depends on device memory</td>
-                        </tr>
-                        <tr>
-                            <td><strong>PDF to JPG</strong></td>
-                            <td>PDF (unencrypted)</td>
-                            <td>High-res JPEG / ZIP</td>
-                            <td>Client-side Canvas</td>
-                            <td>Depends on device memory</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Merge PDF</strong></td>
-                            <td>Multiple PDF files</td>
-                            <td>Consolidated PDF</td>
-                            <td>Client-side PDF-Lib</td>
-                            <td>No server limit</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Split PDF</strong></td>
-                            <td>Single multi-page PDF</td>
-                            <td>Extracted PDF</td>
-                            <td>Client-side PDF-Lib</td>
-                            <td>Limited by device memory</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Delete PDF Pages</strong></td>
-                            <td>Single multi-page PDF</td>
-                            <td>Refined PDF</td>
-                            <td>Client-side PDF-Lib</td>
-                            <td>Limited by device memory</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Rearrange PDF</strong></td>
-                            <td>Single multi-page PDF</td>
-                            <td>Reordered PDF</td>
-                            <td>Client-side PDF-Lib</td>
-                            <td>Limited by device memory</td>
-                        </tr>
-                        <tr>
-                            <td><strong>PDF Extend</strong></td>
-                            <td>PDF + JPG/PNG images</td>
-                            <td>Expanded PDF</td>
-                            <td>Client-side PDF-Lib</td>
-                            <td>Limited by device memory</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
         </div>
     </section>
 
@@ -407,41 +270,6 @@
             <a href="https://play.google.com/store/apps/details?id=com.almakhfi.xpdf" target="_blank" rel="noopener" class="android-btn">
                 Install from Google Play
             </a>
-        </div>
-    </section>
-
-    <!-- FAQ SECTION -->
-    <section class="content-section">
-        <div class="container">
-            <h2>Frequently Asked Questions</h2>
-            <p>Got questions about how PDFx handles your documents? Here are answers to the most common inquiries:</p>
-
-            <div class="faq-grid">
-                <div class="faq-card">
-                    <h3 class="legacy-h4">Are my files uploaded or stored on any server?</h3>
-                    <p>No. PDFx processes files exclusively inside your browser using JavaScript and HTML5 Canvas. The conversion tools do not upload document contents for processing. Hosting, CDNs, and advertising services may receive standard web requests.</p>
-                </div>
-                <div class="faq-card">
-                    <h3 class="legacy-h4">Is PDFx completely free to use?</h3>
-                    <p>Yes. All PDF utilities on PDFx are 100% free with no hidden paywalls, subscription requirements, or watermarks added to your documents.</p>
-                </div>
-                <div class="faq-card">
-                    <h3 class="legacy-h4">Can I convert scanned documents and photos into PDF?</h3>
-                    <p>Yes. You can upload multiple JPG or PNG image files, rotate them to the correct angle, reorder the sequence, and compile them into a standardized PDF.</p>
-                </div>
-                <div class="faq-card">
-                    <h3 class="legacy-h4">What is the file size limit on PDFx?</h3>
-                    <p>Because processing runs locally on your machine, there are no artificial server upload caps. You are only limited by your device's available memory.</p>
-                </div>
-                <div class="faq-card">
-                    <h3 class="legacy-h4">Do I need to install any software or extensions?</h3>
-                    <p>No software installation is necessary. PDFx works directly on Google Chrome, Mozilla Firefox, Microsoft Edge, Safari, and mobile web browsers.</p>
-                </div>
-                <div class="faq-card">
-                    <h3 class="legacy-h4">Are output PDFs compatible with Adobe Acrobat?</h3>
-                    <p>Generated PDFs are intended for standard PDF viewers, including Adobe Acrobat. Check the output in your intended viewer or printing workflow before sharing.</p>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -488,10 +316,10 @@
 </footer>
 
 <!-- SCRIPTS -->
-<script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
-<script src="script.js"></script>
+<script defer src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script defer src="script.js"></script>
 
 </body>
 </html>

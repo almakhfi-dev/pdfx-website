@@ -7,14 +7,14 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2662425279311804" crossorigin="anonymous"></script>
 
     <title>PDF Extend - Add Images & Pages to PDF Online Free | PDFx</title>
-    <meta name="description" content="Add new JPG and PNG pages directly into an existing PDF document online for free with PDFx. Reorder pages and extend your PDF with local file processing.">
+    <meta name="description" content="Insert JPG or PNG images before, between, or after pages in an existing PDF.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://pdfx-website.vercel.app/pdf-extend.html">
     <link rel="icon" type="image/png" href="pdfx-logo.png">
 
     <!-- Open Graph -->
     <meta property="og:title" content="PDF Extend - Add Images & Pages to PDF Online Free | PDFx">
-    <meta property="og:description" content="Seamlessly insert new JPG or PNG pages into your existing PDF file without uploading documents to remote servers.">
+    <meta property="og:description" content="Insert JPG or PNG images before, between, or after pages in an existing PDF.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pdfx-website.vercel.app/pdf-extend.html">
     <meta property="og:image" content="https://pdfx-website.vercel.app/pdfx-logo.png">
@@ -41,6 +41,7 @@
 </head>
 
 <body>
+<a class="skip-link" href="#main-content">Skip to content</a>
 
 <header class="site-header">
     <div class="container header-inner">
@@ -51,7 +52,7 @@
             </a>
             <span class="logo-text">Online PDF Tools</span>
         </div>
-        <nav class="site-nav">
+        <nav class="site-nav" aria-label="Main navigation">
             <a href="/">Home</a>
             <a href="jpg-to-pdf.html">JPG to PDF</a>
             <a href="pdf-to-jpg.html">PDF to JPG</a>
@@ -61,6 +62,7 @@
             <a href="rearrange-pdf.html">Rearrange</a>
             <a href="pdf-extend.html" class="active">Extend</a>
             <a href="about.html">About</a>
+            <a href="/guides.html">Guides</a>
             <a href="faq.html">FAQ</a>
             <a href="contact.html">Contact</a>
         </nav>
@@ -77,22 +79,14 @@
     </div>
 </div>
 
-<main>
+<main id="main-content" tabindex="-1">
 
     <!-- HERO -->
     <section class="hero">
         <div class="container">
-            <h1>PDF Extend Online Free</h1>
-            <p>
-                Add new image pages (receipts, scans, signed forms) directly into your existing PDF file.
-                Reorganize page placement with drag-and-drop and download with local in-browser processing.
-            </p>
-            <div class="badge-group">
-                <span class="badge">🔒 Local File Processing</span>
-                <span class="badge">➕ Insert JPG & PNG Pages</span>
-                <span class="badge">🖐️ Intuitive Drag & Drop</span>
-                <span class="badge">⚡ Zero Cloud Uploads</span>
-            </div>
+            <h1>Add image pages to a PDF</h1>
+            <p>Insert JPG or PNG images before, between, or after pages in an existing PDF.</p>
+            <p><a class="android-btn" href="#pdf-extend-tool">Open the tool</a></p>
         </div>
     </section>
 
@@ -101,9 +95,7 @@
         <div class="tool-card" id="pdf-extend-tool">
             <div class="tool-icon">➕</div>
             <h2>Extend Existing PDF</h2>
-            <p class="tool-desc">
-                Select an existing PDF file from your device, then click "+ Add JPG / PNG Pages" to insert new image pages anywhere in the document.
-            </p>
+            <p class="tool-desc">Insert JPG or PNG images before, between, or after pages in an existing PDF.</p>
 
             <label class="sr-only" for="extendPdfInput">Choose a PDF to add image pages to</label>
             <input type="file" id="extendPdfInput" accept="application/pdf">
@@ -113,7 +105,7 @@
             <input type="file" id="extendImageInput" accept="image/jpeg,image/png" multiple hidden>
             <p class="drag-hint">Drag pages to change their order. Use ↶ / ↷ to rotate.</p>
             <button id="extendBtn" class="primary-btn" disabled>Extend PDF</button>
-            <div id="extendStatus" class="status"></div>
+            <div id="extendStatus" class="status" role="status"></div>
         </div>
     </div>
 
@@ -145,84 +137,23 @@
         </div>
     </section>
 
-    <!-- IN-DEPTH EDITORIAL GUIDE -->
     <section class="content-section">
-        <div class="container">
-            <h2>Why Use PDF Extend to Augment Your Documents?</h2>
-            <p>
-                It is very common to finalize an important PDF—such as a contract, research report, or job application—only to discover that an additional signed verification page, photo identification, or purchase receipt needs to be appended. In the past, users had to convert the entire PDF to Word, insert the picture, re-format the layouts, and export a new PDF, frequently ruining formatting.
+        <div class="container reading-page">
+            <h2>Formats and troubleshooting</h2>
+            <p><strong>PDF plus JPG or PNG images → one PDF</strong>
             </p>
-
-            <h3>Seamless Image Embedding with PDF-Lib</h3>
-            <p>
-                PDFx solves this problem with the <strong>PDF Extend</strong> tool. Built directly on top of <strong>PDF-Lib</strong>, PDF Extend copies existing PDF pages and adds images as new A4 pages. Added images are resized to a maximum edge of 1700 pixels and JPEG-compressed, with transparent areas placed on white. It does not overlay images on existing PDF pages.
-            </p>
-
-            <h3>Complete Privacy for Important Documentation</h3>
-            <p>
-                Appending ID cards, utility bills, or signed signature pages involves sensitive personally identifiable information (PII). Uploading these records to unverified remote web servers poses serious identity theft and security concerns.
-            </p>
-            <p>
-                With PDFx, all image embedding and PDF extension take place strictly in your browser's private local environment. The tool does not upload document contents for processing. Standard website, library, and advertising requests may still occur.
-            </p>
-
-            <div class="callout-box">
-                <h3 class="legacy-h4">Flexible Page Ordering</h3>
-                <p>
-                    You are not restricted to appending new pages to the end of your document. Thanks to our drag-and-drop preview system, you can insert new sheets at the beginning, between pages 3 and 4, or anywhere else you need.
-                </p>
-            </div>
-
-            <h3>Common Scenarios for Extending PDFs</h3>
+            <p>Insert a photo of a signed form into an existing packet.</p>
+            <p>Add the original PDF first, then add the JPG or PNG pages. Drag the new thumbnails to the intended positions before choosing Extend PDF. Confirm the page count and check that each image is legible.</p>
+            <h2>Frequently asked questions</h2>
+            <h3>How do I append pages from another PDF?</h3>
+            <p>Use Merge PDF when both inputs are PDFs. PDF Extend inserts images into an existing PDF.</p>
+            <h2>Related tools</h2>
             <ul>
-                <li><strong>Appending ID Proofs:</strong> Insert photos of driver's licenses, passports, or social security cards into submitted application packets.</li>
-                <li><strong>Attaching Expense Proofs:</strong> Add scans of receipts or invoices to existing corporate expense reports.</li>
-                <li><strong>Adding Signature Pages:</strong> Append handwritten or photographed signature sheets to digital contract drafts.</li>
-                <li><strong>Late Addenda & Notes:</strong> Add updated charts, project addenda, or errata sheets to finalized presentations.</li>
+            <li><a href="/jpg-to-pdf.html">Convert JPG and PNG images into one PDF</a>
+            </li>
+            <li><a href="/merge-pdf.html">Merge PDFs into one document</a>
+            </li>
             </ul>
-        </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="content-section">
-        <div class="container">
-            <h2>Frequently Asked Questions</h2>
-            <p>Common questions about extending PDF documents on PDFx:</p>
-
-            <div class="faq-grid">
-                <div class="faq-card">
-                    <h3 class="legacy-h4">What image formats can I add to my PDF?</h3>
-                    <p>You can add standard JPG, JPEG, and PNG image files. PDFx embeds them cleanly as new PDF pages.</p>
-                </div>
-                <div class="faq-card">
-                    <h3 class="legacy-h4">Can I add multiple images at the same time?</h3>
-                    <p>Yes. You can select multiple images at once and position them throughout your document.</p>
-                </div>
-                <div class="faq-card">
-                    <h3 class="legacy-h4">Are my files sent to any remote server?</h3>
-                    <p>No. All rendering, page generation, and image embedding take place directly in your browser with local file processing.</p>
-                </div>
-                <div class="faq-card">
-                    <h3 class="legacy-h4">Will extending damage my original PDF formatting?</h3>
-                    <p>No. The original vector paths, fonts, and layouts remain untouched. New pages are cleanly integrated into the document hierarchy.</p>
-                </div>
-                <div class="faq-card">
-                    <h3 class="legacy-h4">Can I rotate the newly added images?</h3>
-                    <p>Yes. Each thumbnail has ↶ and ↷ buttons, allowing you to rotate new images to match the document orientation.</p>
-                </div>
-                <div class="faq-card">
-                    <h3 class="legacy-h4">Is there any cost or subscription fee?</h3>
-                    <p>No. PDFx is 100% free with no registration, no subscription fees, and no watermarks.</p>
-                </div>
-            </div>
-
-            <h3 style="margin-top: 35px;">Explore Related Tools</h3>
-            <div class="tools-pills">
-                <a href="jpg-to-pdf.html" class="tool-pill">JPG to PDF Converter</a>
-                <a href="rearrange-pdf.html" class="tool-pill">Rearrange PDF Pages</a>
-                <a href="merge-pdf.html" class="tool-pill">Merge PDF Files</a>
-                <a href="delete-pdf-pages.html" class="tool-pill">Delete PDF Pages</a>
-            </div>
         </div>
     </section>
 
@@ -269,10 +200,9 @@
 </footer>
 
 <!-- SCRIPTS -->
-<script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
-<script src="script.js"></script>
+<script defer src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script defer src="script.js"></script>
 
 </body>
 </html>

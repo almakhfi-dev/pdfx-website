@@ -25,7 +25,6 @@ let splitPages = [];
 let selectedSplitPages = new Set();
 
 let deleteFile = null;
-let deletePages = [];
 let selectedDeletePages = new Set();
 
 let rearrangeFile = null;
@@ -92,6 +91,11 @@ function requestDownload(blob, filename) {
    JPG TO PDF
    ========================================================= */
 
+function isSupportedImage(file) {
+    return file.type === "image/jpeg" || file.type === "image/png" ||
+        (!file.type && /\.(jpe?g|png)$/i.test(file.name));
+}
+
 const imageInput =
     document.getElementById("imageInput");
 
@@ -106,8 +110,10 @@ if (imageInput) imageInput.addEventListener(
     "change",
     function() {
 
-        imageFiles =
-            Array.from(this.files);
+        imageFiles = Array.from(this.files).filter(isSupportedImage);
+        setStatus("imageStatus", imageFiles.length < this.files.length
+            ? "Only JPG and PNG images can be added."
+            : "");
 
         imageRotations =
             imageFiles.map(function() { return 0; });
@@ -1061,6 +1067,10 @@ if (pdfJpgInput) pdfJpgInput.addEventListener(
         selectedJpgPages.clear();
 
         pdfJpgPreview.innerHTML = "";
+        selectAllJpgBtn.disabled = true;
+        clearJpgBtn.disabled = true;
+        convertJpgBtn.disabled = true;
+        setStatus("pdfJpgStatus", "");
 
 
         if (!pdfJpgFile) {
@@ -1086,6 +1096,7 @@ if (pdfJpgInput) pdfJpgInput.addEventListener(
 
             const pdf =
                 await pdfjsLib.getDocument({
+                    isEvalSupported: false,
                     data: arrayBuffer
                 }).promise;
 
@@ -1217,68 +1228,29 @@ async function renderPdfPageThumbnail(
     item.appendChild(img);
     item.appendChild(number);
 
-    const deletePageBtn = document.createElement("button");
-    deletePageBtn.type = "button";
-    deletePageBtn.className = "page-delete-btn";
-    deletePageBtn.textContent = "🗑 Delete";
-    deletePageBtn.title = "Mark this page for deletion";
-    deletePageBtn.addEventListener("click", function(event) {
-        event.stopPropagation();
+    const isDelete = selectionSet === selectedDeletePages;
+    const selectButton = document.createElement("button");
+    selectButton.type = "button";
+    selectButton.className = "page-select-btn";
+    selectButton.textContent = isDelete ? "Mark to remove" : "Select page";
+    selectButton.setAttribute("aria-label", isDelete ? "Remove page " + pageNumber : "Select page " + pageNumber);
+    selectButton.setAttribute("aria-pressed", "false");
 
+    function toggle() {
         if (selectionSet.has(pageNumber)) {
             selectionSet.delete(pageNumber);
-            item.classList.remove("selected", "marked-delete");
-            deletePageBtn.textContent = "🗑 Delete";
         } else {
             selectionSet.add(pageNumber);
-            item.classList.add("selected", "marked-delete");
-            deletePageBtn.textContent = "↩ Keep Page";
         }
+        const selected = selectionSet.has(pageNumber);
+        item.classList.toggle("selected", selected);
+        item.classList.toggle("marked-delete", selected && isDelete);
+        selectButton.setAttribute("aria-pressed", String(selected));
         callback();
-    });
-    item.appendChild(deletePageBtn);
+    }
 
-
-    item.addEventListener(
-        "click",
-        function() {
-
-            if (
-                selectionSet.has(
-                    pageNumber
-                )
-            ) {
-
-                selectionSet.delete(
-                    pageNumber
-                );
-
-                item.classList.remove(
-                    "selected",
-                    "marked-delete"
-                );
-                deletePageBtn.textContent = "🗑 Delete";
-
-            } else {
-
-                selectionSet.add(
-                    pageNumber
-                );
-
-                item.classList.add(
-                    "selected",
-                    "marked-delete"
-                );
-                deletePageBtn.textContent = "↩ Keep Page";
-
-            }
-
-
-            callback();
-
-        }
-    );
-
+    item.addEventListener("click", toggle);
+    item.appendChild(selectButton);
 
     container.appendChild(item);
 }
@@ -1321,6 +1293,7 @@ if (selectAllJpgBtn) selectAllJpgBtn.addEventListener(
                 item.classList.add(
                     "selected"
                 );
+                item.querySelector(".page-select-btn").setAttribute("aria-pressed", "true");
 
             }
         );
@@ -1347,6 +1320,7 @@ if (clearJpgBtn) clearJpgBtn.addEventListener(
                 item.classList.remove(
                     "selected"
                 );
+                item.querySelector(".page-select-btn").setAttribute("aria-pressed", "false");
 
             }
         );
@@ -1728,6 +1702,9 @@ if (splitInput) splitInput.addEventListener(
         }
 
 
+        splitBtn.disabled = true;
+        setStatus("splitStatus", "Loading PDF…");
+
         try {
 
             const bytes =
@@ -1736,6 +1713,7 @@ if (splitInput) splitInput.addEventListener(
 
             const pdf =
                 await pdfjsLib.getDocument({
+                    isEvalSupported: false,
                     data: bytes
                 }).promise;
 
@@ -1792,6 +1770,7 @@ if (splitInput) splitInput.addEventListener(
         } catch (error) {
 
             console.error(error);
+            setStatus("splitStatus", "Could not open this PDF. Try an unlocked copy that opens in your viewer.");
 
         }
 
@@ -1940,6 +1919,9 @@ if (deleteInput) deleteInput.addEventListener(
         }
 
 
+        deleteBtn.disabled = true;
+        setStatus("deleteStatus", "Loading PDF…");
+
         try {
 
             const bytes =
@@ -1948,6 +1930,7 @@ if (deleteInput) deleteInput.addEventListener(
 
             const pdf =
                 await pdfjsLib.getDocument({
+                    isEvalSupported: false,
                     data: bytes
                 }).promise;
 
@@ -1962,15 +1945,6 @@ if (deleteInput) deleteInput.addEventListener(
                     await pdf.getPage(
                         pageNumber
                     );
-
-
-                deletePages.push({
-                    pageNumber:
-                        pageNumber,
-
-                    page:
-                        page
-                });
 
 
                 await renderPdfPageThumbnail(
@@ -1993,11 +1967,13 @@ if (deleteInput) deleteInput.addEventListener(
 
 
             deleteBtn.disabled = false;
+            setStatus("deleteStatus", "Select the pages to remove.");
 
 
         } catch (error) {
 
             console.error(error);
+            setStatus("deleteStatus", "Could not open this PDF. Try an unlocked copy that opens in your viewer.");
 
         }
 
@@ -2162,6 +2138,7 @@ if (rearrangeInput) rearrangeInput.addEventListener(
 
             const pdf =
                 await pdfjsLib.getDocument({
+                    isEvalSupported: false,
                     data: bytes
                 }).promise;
 
@@ -2615,6 +2592,7 @@ if (extendPdfInput) extendPdfInput.addEventListener(
 
             const pdf =
                 await pdfjsLib.getDocument({
+                    isEvalSupported: false,
                     data: bytes
                 }).promise;
 
@@ -2695,6 +2673,11 @@ if (extendImageInput) extendImageInput.addEventListener(
         const files =
             Array.from(this.files);
 
+        if (!files.every(isSupportedImage)) {
+            setStatus("extendStatus", "Only JPG and PNG images can be added.");
+            this.value = "";
+            return;
+        }
 
         if (files.length === 0) {
             return;
@@ -2785,6 +2768,7 @@ async function renderExtendPreview() {
 
             pdf =
                 await pdfjsLib.getDocument({
+                    isEvalSupported: false,
                     data: bytes
                 }).promise;
 

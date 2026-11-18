@@ -7,14 +7,14 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2662425279311804" crossorigin="anonymous"></script>
 
     <title>JPG to PDF Converter - Convert JPG & PNG Images Online Free | PDFx</title>
-    <meta name="description" content="Free online JPG to PDF converter. Combine multiple JPG, JPEG, and PNG images into a single PDF document directly in your browser with local file processing.">
+    <meta name="description" content="Combine worksheet or receipt photos into one PDF. Arrange and rotate the images before export.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://pdfx-website.vercel.app/jpg-to-pdf.html">
     <link rel="icon" type="image/png" href="pdfx-logo.png">
 
     <!-- Open Graph -->
     <meta property="og:title" content="JPG to PDF Converter - Convert JPG & PNG Images Free | PDFx">
-    <meta property="og:description" content="Convert JPG and PNG images into high-quality PDF files directly in your browser. Reorder, rotate, and combine with zero server uploads.">
+    <meta property="og:description" content="Combine worksheet or receipt photos into one PDF. Arrange and rotate the images before export.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pdfx-website.vercel.app/jpg-to-pdf.html">
     <meta property="og:image" content="https://pdfx-website.vercel.app/pdfx-logo.png">
@@ -41,6 +41,7 @@
 </head>
 
 <body>
+<a class="skip-link" href="#main-content">Skip to content</a>
 
 <header class="site-header">
     <div class="container header-inner">
@@ -51,7 +52,7 @@
             </a>
             <span class="logo-text">Online PDF Tools</span>
         </div>
-        <nav class="site-nav">
+        <nav class="site-nav" aria-label="Main navigation">
             <a href="/">Home</a>
             <a href="jpg-to-pdf.html" class="active">JPG to PDF</a>
             <a href="pdf-to-jpg.html">PDF to JPG</a>
@@ -61,6 +62,7 @@
             <a href="rearrange-pdf.html">Rearrange</a>
             <a href="pdf-extend.html">Extend</a>
             <a href="about.html">About</a>
+            <a href="/guides.html">Guides</a>
             <a href="faq.html">FAQ</a>
             <a href="contact.html">Contact</a>
         </nav>
@@ -77,22 +79,14 @@
     </div>
 </div>
 
-<main>
+<main id="main-content" tabindex="-1">
 
     <!-- HERO -->
     <section class="hero">
         <div class="container">
-            <h1>JPG to PDF Converter Online</h1>
-            <p>
-                Convert JPG, JPEG, and PNG images into a clean, professional PDF file in seconds.
-                Organize page order with drag-and-drop, adjust orientations, and download with local file processing.
-            </p>
-            <div class="badge-group">
-                <span class="badge">🔒 Local File Processing</span>
-                <span class="badge">🖼️ Supports JPG & PNG</span>
-                <span class="badge">🔄 Custom Page Rotation</span>
-                <span class="badge">⚡ Zero File Size Limits</span>
-            </div>
+            <h1>Convert JPG and PNG images into one PDF</h1>
+            <p>Combine worksheet or receipt photos into one PDF. Arrange and rotate the images before export.</p>
+            <p><a class="android-btn" href="#jpg-to-pdf-tool">Open the tool</a></p>
         </div>
     </section>
 
@@ -101,16 +95,14 @@
         <div class="tool-card" id="jpg-to-pdf-tool">
             <div class="tool-icon">🖼️</div>
             <h2>Convert Images to PDF</h2>
-            <p class="tool-desc">
-                Select one or multiple images from your device. You can drag and drop thumbnails to reorder pages or click the rotation buttons to fix orientation.
-            </p>
+            <p class="tool-desc">Combine worksheet or receipt photos into one PDF. Arrange and rotate the images before export.</p>
 
             <label class="sr-only" for="imageInput">Choose JPG or PNG images to convert to PDF</label>
             <input type="file" id="imageInput" accept="image/jpeg,image/png" multiple>
             <div id="imagePreview" class="preview-grid"></div>
             <p class="drag-hint">Drag images to reorder. Use ↶ / ↷ to rotate individual pages.</p>
             <button id="convertImageBtn" class="primary-btn" disabled>Convert Images to PDF</button>
-            <div id="imageStatus" class="status"></div>
+            <div id="imageStatus" class="status" role="status"></div>
         </div>
     </div>
 
@@ -142,84 +134,28 @@
         </div>
     </section>
 
-    <!-- IN-DEPTH EDITORIAL GUIDE -->
     <section class="content-section">
-        <div class="container">
-            <h2>Why Convert Images to PDF with PDFx?</h2>
-            <p>
-                While image formats like JPG and PNG are great for photos and web graphics, they present notable challenges when sharing multi-page documents, official applications, or academic coursework. A multi-page PDF solves these issues by bundling everything into a single, standardized document with consistent layout and formatting across all operating systems.
+        <div class="container reading-page">
+            <h2>Formats and troubleshooting</h2>
+            <p><strong>JPG or PNG images → one PDF</strong>
             </p>
-
-            <h3>In-Browser Image Processing</h3>
-            <p>
-                The biggest difference between PDFx and conventional online converters is our architecture. Traditional online tools upload your private pictures to an unknown cloud server, convert them remotely, and send back a link. This introduces severe security vulnerabilities for sensitive documents such as passport scans, bank slips, medical records, or company invoices.
-            </p>
-            <p>
-                PDFx performs all image embedding, canvas rendering, and PDF compilation locally inside your web browser using HTML5 Canvas and JavaScript. Selected images are processed locally; the website also makes standard requests for hosting, libraries, and advertising. Local processing alone does not establish regulatory compliance.
-            </p>
-
-            <h3>Image Resizing & Compression</h3>
-            <p>
-                PDFx fits images onto A4 pages. Images are resized to a maximum edge of 1700 pixels and encoded as JPEG with adaptive compression, starting at a quality setting of 0.72 and potentially reducing it to control file size. PNG transparency is placed on a white background. Resizing and compression can reduce detail or alter colors; review the downloaded PDF before sharing.
-            </p>
-
-            <div class="callout-box">
-                <h3 class="legacy-h4">No File Size Limits & No Sign-Up</h3>
-                <p>
-                    Because conversion happens directly using your computer or smartphone's computing power, there are no artificial file upload limits, no waiting queues, and no requirement to register an account or provide an email address.
-                </p>
-            </div>
-
-            <h3>Popular Use Cases for JPG to PDF</h3>
+            <p>Combine photos of a worksheet or receipts into a single document.</p>
+            <p>Review the preview order and rotate sideways images before converting. The output is image-based and does not add searchable text. If an image fails to load, export it as JPG or PNG and try again.</p>
+            <h2>Frequently asked questions</h2>
+            <h3>Can I mix JPG and PNG files?</h3>
+            <p>Yes. Add both types to the same batch and check their order before creating the PDF.</p>
+            <h2>Further reading</h2>
             <ul>
-                <li><strong>Official & Government Submissions:</strong> Many job applications, visa portals, and universities require supporting documents (diplomas, IDs, transcripts) to be submitted as a single unified PDF file.</li>
-                <li><strong>Expense & Tax Reporting:</strong> Consolidate photographs of receipts, utility bills, and invoices into an organized monthly expense PDF report.</li>
-                <li><strong>E-books & Portfolios:</strong> Compile photography portfolios, art sketches, or scanned book pages into an easy-to-read document for clients or colleagues.</li>
-                <li><strong>Contract Archival:</strong> Combine signed paper contract photos into an image-based PDF archive. PDFx does not perform OCR or add searchable text to photos.</li>
+            <li><a href="/guide-convert-jpg-png-to-pdf.html">Convert JPG and PNG images to a PDF</a>
+            </li>
             </ul>
-        </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="content-section">
-        <div class="container">
-            <h2>Frequently Asked Questions</h2>
-            <p>Find answers to common questions regarding JPG and PNG image conversion:</p>
-
-            <div class="faq-grid">
-                <div class="faq-card">
-                    <h3 class="legacy-h4">Can I combine different image formats into one PDF?</h3>
-                    <p>Yes. You can select a mix of JPG, JPEG, and PNG images simultaneously. PDFx will compile all of them seamlessly into a single sequential PDF document.</p>
-                </div>
-                <div class="faq-card">
-                    <h3 class="legacy-h4">Is there any limit on how many images I can convert?</h3>
-                    <p>There is no fixed limit. You can convert dozens of images at once. The practical capacity depends entirely on your device's available memory.</p>
-                </div>
-                <div class="faq-card">
-                    <h3 class="legacy-h4">Will my images lose quality during conversion?</h3>
-                    <p>Images may be resized and JPEG-compressed to keep output manageable. This can reduce fine detail or affect colors. The output contains image pages, without OCR or added searchable text.</p>
-                </div>
-                <div class="faq-card">
-                    <h3 class="legacy-h4">Are my images stored or analyzed?</h3>
-                    <p>Never. All processing takes place locally in your browser memory. We do not have servers storing your files or scanning your content.</p>
-                </div>
-                <div class="faq-card">
-                    <h3 class="legacy-h4">Can I change the order of pages before downloading?</h3>
-                    <p>Yes. Simply drag any thumbnail image left or right in the preview grid to reposition it exactly where you want it in the final PDF.</p>
-                </div>
-                <div class="faq-card">
-                    <h3 class="legacy-h4">How do I rotate an image that uploaded upside down?</h3>
-                    <p>Each thumbnail features ↶ 90° (left) and ↷ 90° (right) rotation buttons so you can quickly adjust orientations before converting.</p>
-                </div>
-            </div>
-
-            <h3 style="margin-top: 35px;">Explore Related Tools</h3>
-            <div class="tools-pills">
-                <a href="pdf-to-jpg.html" class="tool-pill">PDF to JPG Converter</a>
-                <a href="merge-pdf.html" class="tool-pill">Merge PDF</a>
-                <a href="rearrange-pdf.html" class="tool-pill">Rearrange PDF Pages</a>
-                <a href="pdf-extend.html" class="tool-pill">PDF Extend Tool</a>
-            </div>
+            <h2>Related tools</h2>
+            <ul>
+            <li><a href="/pdf-extend.html">Add image pages to a PDF</a>
+            </li>
+            <li><a href="/pdf-to-jpg.html">Export PDF pages as JPG images</a>
+            </li>
+            </ul>
         </div>
     </section>
 
@@ -266,10 +202,8 @@
 </footer>
 
 <!-- SCRIPTS -->
-<script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
-<script src="script.js"></script>
+<script defer src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+<script defer src="script.js"></script>
 
 </body>
 </html>

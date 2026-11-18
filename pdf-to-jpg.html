@@ -7,14 +7,14 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2662425279311804" crossorigin="anonymous"></script>
 
     <title>PDF to JPG Converter - Convert PDF Pages to Images Online Free | PDFx</title>
-    <meta name="description" content="Convert PDF documents to high quality JPG images online for free with PDFx. Extract individual pages or entire documents directly in your browser with local file processing.">
+    <meta name="description" content="Export a slide or diagram from a PDF. Selected pages download as JPG images in a ZIP archive.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://pdfx-website.vercel.app/pdf-to-jpg.html">
     <link rel="icon" type="image/png" href="pdfx-logo.png">
 
     <!-- Open Graph -->
     <meta property="og:title" content="PDF to JPG Converter Online Free | PDFx">
-    <meta property="og:description" content="Extract high-resolution JPG images from your PDF files directly in your web browser with zero server uploads.">
+    <meta property="og:description" content="Export a slide or diagram from a PDF. Selected pages download as JPG images in a ZIP archive.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pdfx-website.vercel.app/pdf-to-jpg.html">
     <meta property="og:image" content="https://pdfx-website.vercel.app/pdfx-logo.png">
@@ -41,6 +41,7 @@
 </head>
 
 <body>
+<a class="skip-link" href="#main-content">Skip to content</a>
 
 <header class="site-header">
     <div class="container header-inner">
@@ -51,7 +52,7 @@
             </a>
             <span class="logo-text">Online PDF Tools</span>
         </div>
-        <nav class="site-nav">
+        <nav class="site-nav" aria-label="Main navigation">
             <a href="/">Home</a>
             <a href="jpg-to-pdf.html">JPG to PDF</a>
             <a href="pdf-to-jpg.html" class="active">PDF to JPG</a>
@@ -61,6 +62,7 @@
             <a href="rearrange-pdf.html">Rearrange</a>
             <a href="pdf-extend.html">Extend</a>
             <a href="about.html">About</a>
+            <a href="/guides.html">Guides</a>
             <a href="faq.html">FAQ</a>
             <a href="contact.html">Contact</a>
         </nav>
@@ -77,21 +79,14 @@
     </div>
 </div>
 
-<main>
+<main id="main-content" tabindex="-1">
 
     <!-- HERO -->
     <section class="hero">
         <div class="container">
-            <h1>PDF to JPG Converter Online Free</h1>
-            <p>
-                Extract crisp, high-resolution JPG pictures from any PDF file. Choose specific pages or export the entire document directly within your web browser.
-            </p>
-            <div class="badge-group">
-                <span class="badge">🔒 Local File Processing</span>
-                <span class="badge">📸 High-Resolution Rendering</span>
-                <span class="badge">📦 Download Single or ZIP Archive</span>
-                <span class="badge">⚡ Zero Cloud Uploads</span>
-            </div>
+            <h1>Export PDF pages as JPG images</h1>
+            <p>Export a slide or diagram from a PDF. Selected pages download as JPG images in a ZIP archive.</p>
+            <p><a class="android-btn" href="#pdf-to-jpg-tool">Open the tool</a></p>
         </div>
     </section>
 
@@ -100,9 +95,7 @@
         <div class="tool-card" id="pdf-to-jpg-tool">
             <div class="tool-icon">📄</div>
             <h2>Convert PDF to High-Res JPG</h2>
-            <p class="tool-desc">
-                Select a PDF file from your device. You can click individual pages to convert only what you need, or click "Select All" to convert every page.
-            </p>
+            <p class="tool-desc">Export a slide or diagram from a PDF. Selected pages download as JPG images in a ZIP archive.</p>
 
             <label class="sr-only" for="pdfJpgInput">Choose a PDF to convert to JPG images</label>
             <input type="file" id="pdfJpgInput" accept="application/pdf">
@@ -112,7 +105,7 @@
             </div>
             <div id="pdfJpgPreview" class="preview-grid"></div>
             <button id="convertJpgBtn" class="primary-btn" disabled>Convert Selected Pages</button>
-            <div id="pdfJpgStatus" class="status"></div>
+            <div id="pdfJpgStatus" class="status" role="status"></div>
         </div>
     </div>
 
@@ -128,7 +121,7 @@
                 <div class="step-card">
                     <div class="step-number">1</div>
                     <h3 class="legacy-h4">Choose Your PDF</h3>
-                    <p>Click the upload field and select any PDF document stored on your laptop, desktop, or smartphone.</p>
+                    <p>Use the file picker to select a PDF that opens without a password.</p>
                 </div>
                 <div class="step-card">
                     <div class="step-number">2</div>
@@ -144,84 +137,23 @@
         </div>
     </section>
 
-    <!-- IN-DEPTH EDITORIAL GUIDE -->
     <section class="content-section">
-        <div class="container">
-            <h2>High-Fidelity PDF Image Extraction with Client-Side Safety</h2>
-            <p>
-                PDF documents are designed for static cross-platform consistency, but sharing individual charts, slides, or diagrams often requires a versatile image format like JPG. Whether you want to post a PDF flyer on social media, embed an invoice illustration in an email, or insert a slide into a presentation, converting PDF pages to JPG is the ideal solution.
+        <div class="container reading-page">
+            <h2>Formats and troubleshooting</h2>
+            <p><strong>PDF → ZIP of JPG images</strong>
             </p>
-
-            <h3>How PDF.js and Canvas Ensure Pristine Image Quality</h3>
-            <p>
-                PDFx utilizes Mozilla's industry-standard <strong>PDF.js</strong> rendering engine combined with the HTML5 Canvas API. When you load a document, our software parses the vector paths, typography fonts, embedded images, and color matrices inside the PDF. Each selected page is drawn onto a canvas at scale 1.5, then encoded as a JPG image. Small text and graphics may lose detail during rasterization and compression.
-            </p>
-
-            <h3>Why Local Browser Processing Protects Your Sensitive Information</h3>
-            <p>
-                Bank statements, payslips, medical records, tax filings, and legal agreements are frequently formatted as PDFs. Uploading these documents to random third-party web services exposes your confidential data to data breaches, scraping, and unauthorized server storage.
-            </p>
-            <p>
-                PDFx renders pages, encodes JPG images, and creates the ZIP archive in your browser without uploading the document for conversion. Hosting, CDN, and advertising requests may still be logged separately.
-            </p>
-
-            <div class="callout-box">
-                <h3 class="legacy-h4">ZIP Download for Any Selection</h3>
-                <p>
-                    PDFx downloads a <code>.zip</code> archive containing the selected pages as <code>.jpg</code> files, including when you select just one page. Extract the archive to access the images.
-                </p>
-            </div>
-
-            <h3>Common Scenarios for PDF to JPG Conversion</h3>
+            <p>Share selected slides or a single diagram as an image.</p>
+            <p>The tool renders selected pages into a ZIP archive, even if only one page is selected. Extract the ZIP to open the JPGs. Text becomes pixels. For large PDFs, convert a smaller selection at a time.</p>
+            <h2>Frequently asked questions</h2>
+            <h3>Why did I get a ZIP file?</h3>
+            <p>The ZIP keeps the images together. Its filenames identify the source page numbers.</p>
+            <h2>Related tools</h2>
             <ul>
-                <li><strong>Social Media & Web Publishing:</strong> Platforms like Instagram, Facebook, and LinkedIn do not allow direct multi-page PDF image previews. Converting to JPG lets you publish visuals effortlessly.</li>
-                <li><strong>Presentation Slides:</strong> Easily extract presentation pages to insert as high-resolution graphics inside PowerPoint, Google Slides, or Keynote.</li>
-                <li><strong>Mobile Messaging:</strong> Send quick snapshots of receipts, tickets, or certificates over WhatsApp, Telegram, or Messenger without requiring the recipient to open a PDF viewer.</li>
-                <li><strong>Archival & OCR Workflows:</strong> Prepare clean bitmap images for optical character recognition or image classification algorithms.</li>
+            <li><a href="/split-pdf.html">Extract pages from a PDF</a>
+            </li>
+            <li><a href="/jpg-to-pdf.html">Convert JPG and PNG images into one PDF</a>
+            </li>
             </ul>
-        </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="content-section">
-        <div class="container">
-            <h2>Frequently Asked Questions</h2>
-            <p>Got questions about converting PDFs to JPG images? Here are detailed answers:</p>
-
-            <div class="faq-grid">
-                <div class="faq-card">
-                    <h3 class="legacy-h4">Can I convert only specific pages instead of the whole file?</h3>
-                    <p>Yes! Simply click the thumbnails of the specific pages you wish to export. Only the highlighted pages will be converted into JPG images.</p>
-                </div>
-                <div class="faq-card">
-                    <h3 class="legacy-h4">What resolution are the extracted JPG images?</h3>
-                    <p>PDFx renders each page at a scale of 1.5 relative to its PDF dimensions and encodes JPG at a quality setting of 0.92. Pixel dimensions depend on the source page size. JPG uses lossy compression; this renders full pages rather than extracting original embedded images.</p>
-                </div>
-                <div class="faq-card">
-                    <h3 class="legacy-h4">Are my converted files uploaded to a remote database?</h3>
-                    <p>No. All rendering and conversion takes place entirely inside your web browser. Neither your PDF nor the resulting JPG files are transmitted to any server.</p>
-                </div>
-                <div class="faq-card">
-                    <h3 class="legacy-h4">What if my PDF has dozens of pages?</h3>
-                    <p>PDFx can handle large multi-page PDFs. When exporting multiple pages, it creates a clean ZIP archive so you can download all images in one click.</p>
-                </div>
-                <div class="faq-card">
-                    <h3 class="legacy-h4">Can PDFx convert password-protected PDFs?</h3>
-                    <p>PDFx currently processes unencrypted PDF documents. If your PDF has an open password, unlock it before converting.</p>
-                </div>
-                <div class="faq-card">
-                    <h3 class="legacy-h4">Is there any cost or watermarking involved?</h3>
-                    <p>No. The PDFx PDF to JPG converter is free to use and never adds watermarks or branding to your images.</p>
-                </div>
-            </div>
-
-            <h3 style="margin-top: 35px;">Explore Related Tools</h3>
-            <div class="tools-pills">
-                <a href="jpg-to-pdf.html" class="tool-pill">JPG to PDF Converter</a>
-                <a href="split-pdf.html" class="tool-pill">Split PDF Pages</a>
-                <a href="delete-pdf-pages.html" class="tool-pill">Delete PDF Pages</a>
-                <a href="merge-pdf.html" class="tool-pill">Merge PDF</a>
-            </div>
         </div>
     </section>
 
@@ -268,10 +200,10 @@
 </footer>
 
 <!-- SCRIPTS -->
-<script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
-<script src="script.js"></script>
+<script defer src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script defer src="script.js"></script>
 
 </body>
 </html>
