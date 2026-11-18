@@ -7,14 +7,14 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2662425279311804" crossorigin="anonymous"></script>
 
     <title>Split PDF Online Free - Extract Specific PDF Pages | PDFx</title>
-    <meta name="description" content="Split and extract specific pages from any PDF document online for free with PDFx. browser-based in-browser tool with zero server uploads and instant download.">
+    <meta name="description" content="Create one PDF containing the pages you select, such as a schedule from an event packet.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://pdfx-website.vercel.app/split-pdf.html">
     <link rel="icon" type="image/png" href="pdfx-logo.png">
 
     <!-- Open Graph -->
     <meta property="og:title" content="Split PDF Online Free - Extract Specific PDF Pages | PDFx">
-    <meta property="og:description" content="Extract selected pages from your PDF files directly inside your browser. No sign-up, no software installation, and browser-based.">
+    <meta property="og:description" content="Create one PDF containing the pages you select, such as a schedule from an event packet.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pdfx-website.vercel.app/split-pdf.html">
     <meta property="og:image" content="https://pdfx-website.vercel.app/pdfx-logo.png">
@@ -41,6 +41,7 @@
 </head>
 
 <body>
+<a class="skip-link" href="#main-content">Skip to content</a>
 
 <header class="site-header">
     <div class="container header-inner">
@@ -51,7 +52,7 @@
             </a>
             <span class="logo-text">Online PDF Tools</span>
         </div>
-        <nav class="site-nav">
+        <nav class="site-nav" aria-label="Main navigation">
             <a href="/">Home</a>
             <a href="jpg-to-pdf.html">JPG to PDF</a>
             <a href="pdf-to-jpg.html">PDF to JPG</a>
@@ -61,6 +62,7 @@
             <a href="rearrange-pdf.html">Rearrange</a>
             <a href="pdf-extend.html">Extend</a>
             <a href="about.html">About</a>
+            <a href="/guides.html">Guides</a>
             <a href="faq.html">FAQ</a>
             <a href="contact.html">Contact</a>
         </nav>
@@ -77,22 +79,14 @@
     </div>
 </div>
 
-<main>
+<main id="main-content" tabindex="-1">
 
     <!-- HERO -->
     <section class="hero">
         <div class="container">
-            <h1>Split PDF Online Free</h1>
-            <p>
-                Extract specific pages or sections from any PDF document and save them into a new file.
-                Fast visual selection with local file processing and no fixed upload limit; device memory limits apply.
-            </p>
-            <div class="badge-group">
-                <span class="badge">🔒 Local File Processing</span>
-                <span class="badge">✂️ Extract Any Page Range</span>
-                <span class="badge">👁️ Visual Page Previews</span>
-                <span class="badge">⚡ Instant Browser Download</span>
-            </div>
+            <h1>Extract pages from a PDF</h1>
+            <p>Create one PDF containing the pages you select, such as a schedule from an event packet.</p>
+            <p><a class="android-btn" href="#split-pdf-tool">Open the tool</a></p>
         </div>
     </section>
 
@@ -101,15 +95,13 @@
         <div class="tool-card" id="split-pdf-tool">
             <div class="tool-icon">✂️</div>
             <h2>Extract Specific PDF Pages</h2>
-            <p class="tool-desc">
-                Select a PDF file from your device. Click on the page thumbnails you wish to extract into your new PDF document.
-            </p>
+            <p class="tool-desc">Create one PDF containing the pages you select, such as a schedule from an event packet.</p>
 
             <label class="sr-only" for="splitInput">Choose a PDF to extract pages from</label>
             <input type="file" id="splitInput" accept="application/pdf">
             <div id="splitPreview" class="preview-grid"></div>
             <button id="splitBtn" class="primary-btn" disabled>Create Selected PDF</button>
-            <div id="splitStatus" class="status"></div>
+            <div id="splitStatus" class="status" role="status"></div>
         </div>
     </div>
 
@@ -141,81 +133,28 @@
         </div>
     </section>
 
-    <!-- IN-DEPTH EDITORIAL GUIDE -->
     <section class="content-section">
-        <div class="container">
-            <h2>Why Split PDF Documents with PDFx?</h2>
-            <p>
-                Many documents—such as commercial agreements, government manuals, academic books, and bank statement bundles—span hundreds of pages. In many cases, you only need to submit a two-page receipt, a single signed agreement sheet, or an individual chapter to a client or colleague. Emailing a massive 80MB document is inefficient and risks rejection by mail server attachment limits.
+        <div class="container reading-page">
+            <h2>Formats and troubleshooting</h2>
+            <p><strong>PDF → one PDF containing selected pages</strong>
             </p>
-
-            <h3>Copy Pages Without Rasterization</h3>
-            <p>
-                Unlike basic command-line utilities or blind page number inputs, PDFx gives you a rich visual grid preview of every page in your document. You can clearly inspect charts, headers, and text before selecting which sheets to keep. Selected pages are copied without rasterizing their text, vectors, or images. Complex forms, bookmarks, signatures, and links may not behave identically after extraction; inspect the output.
-            </p>
-
-            <h3>Why In-Browser Processing is Essential for Sensitive Data</h3>
-            <p>
-                Splitting documents is frequently performed on confidential paperwork such as tax filings, mortgage contracts, employee reviews, and medical histories. Using traditional cloud converters means uploading your personal records to remote servers. PDFx uses JavaScript and PDF-Lib to extract pages locally without uploading the PDF for processing. Standard website, CDN, and advertising requests remain separate from document conversion.
-            </p>
-
-            <div class="callout-box">
-                <h3 class="legacy-h4">Reduce File Size Naturally</h3>
-                <p>
-                    By extracting only the essential pages, your new PDF document is naturally much smaller and easier to send over email, chat applications, or document management portals.
-                </p>
-            </div>
-
-            <h3>Common Scenarios for Splitting PDFs</h3>
+            <p>Extract the schedule from a larger event packet.</p>
+            <p>Select the pages to keep. PDFx creates one copy with the selected pages in source order. Choose at least one thumbnail and check the exported page count before sharing.</p>
+            <h2>Frequently asked questions</h2>
+            <h3>Does each selected page become a separate file?</h3>
+            <p>The selected pages go into one new PDF. Run the tool separately for each group you need.</p>
+            <h2>Further reading</h2>
             <ul>
-                <li><strong>Extracting Tax Schedules:</strong> Pull out only Schedule C or specific W-2 sheets from a 60-page annual tax return.</li>
-                <li><strong>Coursework & Study Guides:</strong> Extract specific chapters or assignment sections from thick digital textbooks.</li>
-                <li><strong>Contract Signing:</strong> Save and send only the signature and signature verification pages to legal counterparties.</li>
-                <li><strong>Real Estate Documents:</strong> Isolate property disclosures or inspection reports from a bulky escrow packet.</li>
+            <li><a href="/guide-extract-specific-pdf-pages.html">Extract specific pages from a PDF</a>
+            </li>
             </ul>
-        </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="content-section">
-        <div class="container">
-            <h2>Frequently Asked Questions</h2>
-            <p>Answers to common questions about splitting PDF files on PDFx:</p>
-
-            <div class="faq-grid">
-                <div class="faq-card">
-                    <h3 class="legacy-h4">Can I choose non-consecutive pages?</h3>
-                    <p>Yes! You can select any combination of pages—for example, pages 1, 4, 7, and 12. PDFx will assemble them cleanly into your new PDF.</p>
-                </div>
-                <div class="faq-card">
-                    <h3 class="legacy-h4">Does splitting alter my original PDF file?</h3>
-                    <p>Not at all. Your original file on your computer remains untouched. PDFx creates a brand new document containing only your extracted pages.</p>
-                </div>
-                <div class="faq-card">
-                    <h3 class="legacy-h4">Are my confidential files stored on your servers?</h3>
-                    <p>The tool processes document contents in your browser without uploading them for extraction. Standard website and third-party requests may still occur.</p>
-                </div>
-                <div class="faq-card">
-                    <h3 class="legacy-h4">What is the page limit for splitting?</h3>
-                    <p>There is no arbitrary limit. PDFx can render and split PDFs containing hundreds of pages depending on your device's memory.</p>
-                </div>
-                <div class="faq-card">
-                    <h3 class="legacy-h4">Is this tool free of charge?</h3>
-                    <p>Yes, 100% free with no registration, no hidden subscriptions, and no watermarks added.</p>
-                </div>
-                <div class="faq-card">
-                    <h3 class="legacy-h4">Does the extracted PDF retain clickable links and text?</h3>
-                    <p>Existing page text, fonts, and images are copied without rasterization. Link behavior and document-level features can vary after extraction. Image-only scans do not gain searchable text.</p>
-                </div>
-            </div>
-
-            <h3 style="margin-top: 35px;">Explore Related Tools</h3>
-            <div class="tools-pills">
-                <a href="delete-pdf-pages.html" class="tool-pill">Delete PDF Pages</a>
-                <a href="merge-pdf.html" class="tool-pill">Merge PDF Files</a>
-                <a href="rearrange-pdf.html" class="tool-pill">Rearrange PDF Pages</a>
-                <a href="pdf-to-jpg.html" class="tool-pill">PDF to JPG Converter</a>
-            </div>
+            <h2>Related tools</h2>
+            <ul>
+            <li><a href="/delete-pdf-pages.html">Delete pages from a PDF</a>
+            </li>
+            <li><a href="/merge-pdf.html">Merge PDFs into one document</a>
+            </li>
+            </ul>
         </div>
     </section>
 
@@ -262,10 +201,9 @@
 </footer>
 
 <!-- SCRIPTS -->
-<script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
-<script src="script.js"></script>
+<script defer src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script defer src="script.js"></script>
 
 </body>
 </html>

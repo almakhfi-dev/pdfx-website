@@ -7,14 +7,14 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2662425279311804" crossorigin="anonymous"></script>
 
     <title>About PDFx - Free Online PDF Tools & Privacy Architecture</title>
-    <meta name="description" content="Learn about PDFx, our mission to provide private, browser-based PDF utilities without server uploads, our modern web architecture, and our development standards.">
+    <meta name="description" content="PDFx provides seven utilities for common PDF and image tasks.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://pdfx-website.vercel.app/about.html">
     <link rel="icon" type="image/png" href="pdfx-logo.png">
 
     <!-- Open Graph -->
     <meta property="og:title" content="About PDFx - Free Online PDF Tools">
-    <meta property="og:description" content="Discover how PDFx is redefining document processing with browser-based document tools.">
+    <meta property="og:description" content="PDFx provides seven utilities for common PDF and image tasks.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pdfx-website.vercel.app/about.html">
     <meta property="og:image" content="https://pdfx-website.vercel.app/pdfx-logo.png">
@@ -23,6 +23,7 @@
 </head>
 
 <body>
+<a class="skip-link" href="#main-content">Skip to content</a>
 
 <header class="site-header">
     <div class="container header-inner">
@@ -33,7 +34,7 @@
             </a>
             <span class="logo-text">Online PDF Tools</span>
         </div>
-        <nav class="site-nav">
+        <nav class="site-nav" aria-label="Main navigation">
             <a href="/">Home</a>
             <a href="jpg-to-pdf.html">JPG to PDF</a>
             <a href="pdf-to-jpg.html">PDF to JPG</a>
@@ -43,6 +44,7 @@
             <a href="rearrange-pdf.html">Rearrange</a>
             <a href="pdf-extend.html">Extend</a>
             <a href="about.html" class="active">About</a>
+            <a href="/guides.html">Guides</a>
             <a href="faq.html">FAQ</a>
             <a href="contact.html">Contact</a>
         </nav>
@@ -57,93 +59,24 @@
     </div>
 </div>
 
-<main>
+<main id="main-content" tabindex="-1">
 
     <!-- HERO -->
     <section class="hero">
         <div class="container">
             <h1>About PDFx</h1>
-            <p>
-                PDFx was created with a clear objective: to make essential PDF management tools fast, accessible,
-                and completely private for everyone around the world.
-            </p>
+            <p>PDFx provides seven utilities for common PDF and image tasks.</p>
         </div>
     </section>
 
     <!-- EDITORIAL CONTENT -->
     <section class="content-section">
-        <div class="container">
-            <h2>Our Mission & Vision</h2>
-            <p>
-                In today's digital environment, Portable Document Format (PDF) files are the standard for legal contracts,
-                academic research, tax documentation, medical records, and corporate invoices. However, when everyday users
-                need to perform simple tasks—such as turning photos into a PDF, merging two reports, or removing a blank page—they
-                are often confronted with expensive proprietary software licenses or cloud converter websites that require uploading
-                confidential documents to third-party servers.
-            </p>
-            <p>
-                <strong>PDFx bridges this gap.</strong> We offer an open, web-accessible suite of document utilities that execute
-                entirely inside your browser. No subscription fees, no artificial document limits, no sign-ups, and most importantly,
-                zero server-side data retention.
-            </p>
-
-            <h2>Privacy by Design: Why In-Browser Processing Matters</h2>
-            <p>
-                Traditional online document converters follow an outdated client-server architecture: you upload your file to their remote
-                servers, their servers process it, and you download the converted file. This approach creates serious security risks,
-                including potential data interception, unauthorized archiving, and vulnerability to server breaches.
-            </p>
-            <p>
-                At PDFx, we built our entire platform upon the principle of <strong>Privacy by Design</strong>:
-            </p>
-            <ul>
-                <li><strong>Local Execution:</strong> When you open a PDF or image in PDFx, the file is read directly into your device's RAM memory using the HTML5 File API and JavaScript.</li>
-                <li><strong>Zero Server Uploads:</strong> None of your document data, pages, or images are ever transmitted over the network to our servers.</li>
-                <li><strong>Privacy Protection:</strong> The PDF tools process selected document contents locally rather than uploading them for conversion. Website requests and third-party services are separate from document processing.</li>
-            </ul>
-
-            <div class="callout-box">
-                <h3 class="legacy-h4">Internet Access & Local Processing</h3>
-                <p>
-                    PDF processing runs locally, but the website loads libraries and a PDF worker from CDNs. An internet connection may be needed when these resources are first requested; reliable offline use is not currently supported.
-                </p>
-            </div>
-
-            <h2>Our Technology Stack</h2>
-            <p>
-                PDFx relies on robust, open-source web technologies and modern browser standards to deliver desktop-class performance:
-            </p>
-            <div class="features-grid">
-                <div class="feature-box">
-                    <div class="f-icon">⚙️</div>
-                    <h3 class="legacy-h4">PDF-Lib Engine</h3>
-                    <p>A pure JavaScript PDF manipulation engine that parses, edits, creates, and saves PDF documents without rasterizing existing PDF pages.</p>
-                </div>
-                <div class="feature-box">
-                    <div class="f-icon">📄</div>
-                    <h3 class="legacy-h4">Mozilla PDF.js</h3>
-                    <p>Industry-standard PDF parsing and rendering library developed by Mozilla for high-resolution canvas graphics rendering.</p>
-                </div>
-                <div class="feature-box">
-                    <div class="f-icon">📦</div>
-                    <h3 class="legacy-h4">JSZip Technology</h3>
-                    <p>High-speed client-side ZIP packaging for batch conversions, ensuring convenient downloads without external tools.</p>
-                </div>
-            </div>
-
-            <h2>Developer & Ongoing Maintenance</h2>
-            <p>
-                PDFx is developed and maintained by <strong>Almakhfi Dev</strong>. We actively monitor browser standards,
-                fix compatibility issues, and update libraries to support new PDF specifications and high-DPI displays.
-                In addition to our web platform, we also maintain the official PDFx Android application on Google Play
-                for users who need mobile document tools on their phones.
-            </p>
-
-            <h3>Get in Touch</h3>
-            <p>
-                We welcome community feedback, feature suggestions, and bug reports. If you would like to get in touch with our team,
-                please visit our <a href="contact.html">Contact Page</a> or send an email directly to <a href="mailto:almakhfi.dev@gmail.com">almakhfi.dev@gmail.com</a>.
-            </p>
+        <div class="container reading-page">
+            <h2>What you can do</h2>
+            <p>Convert JPG and PNG images into a PDF, export PDF pages as JPGs, or combine, extract, delete, rearrange and insert pages. The web tools are free and require no account.</p>
+            <h2>How files are handled</h2>
+            <p>PDFx generates the output in your browser. The site also loads libraries and advertising scripts over the network. See the <a href="/privacy.html">Privacy Policy</a> for details.</p>
+            <p>Start with the <a href="/#tools">tool list</a> or use the <a href="/guides.html">worked examples</a>.</p>
         </div>
     </section>
 

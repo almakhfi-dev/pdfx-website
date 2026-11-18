@@ -7,14 +7,14 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2662425279311804" crossorigin="anonymous"></script>
 
     <title>Rearrange PDF Pages - Reorder & Rotate PDF Online Free | PDFx</title>
-    <meta name="description" content="Reorder and rotate PDF pages online for free with PDFx. Drag and drop thumbnails to rearrange pages and adjust orientations with local file processing.">
+    <meta name="description" content="Put scans into reading order and correct sideways pages before exporting a new PDF.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://pdfx-website.vercel.app/rearrange-pdf.html">
     <link rel="icon" type="image/png" href="pdfx-logo.png">
 
     <!-- Open Graph -->
     <meta property="og:title" content="Rearrange PDF Pages - Reorder & Rotate PDF Online Free | PDFx">
-    <meta property="og:description" content="Effortlessly reorganize and rotate pages in any PDF file using intuitive drag and drop directly in your browser.">
+    <meta property="og:description" content="Put scans into reading order and correct sideways pages before exporting a new PDF.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pdfx-website.vercel.app/rearrange-pdf.html">
     <meta property="og:image" content="https://pdfx-website.vercel.app/pdfx-logo.png">
@@ -41,6 +41,7 @@
 </head>
 
 <body>
+<a class="skip-link" href="#main-content">Skip to content</a>
 
 <header class="site-header">
     <div class="container header-inner">
@@ -51,7 +52,7 @@
             </a>
             <span class="logo-text">Online PDF Tools</span>
         </div>
-        <nav class="site-nav">
+        <nav class="site-nav" aria-label="Main navigation">
             <a href="/">Home</a>
             <a href="jpg-to-pdf.html">JPG to PDF</a>
             <a href="pdf-to-jpg.html">PDF to JPG</a>
@@ -61,6 +62,7 @@
             <a href="rearrange-pdf.html" class="active">Rearrange</a>
             <a href="pdf-extend.html">Extend</a>
             <a href="about.html">About</a>
+            <a href="/guides.html">Guides</a>
             <a href="faq.html">FAQ</a>
             <a href="contact.html">Contact</a>
         </nav>
@@ -77,22 +79,14 @@
     </div>
 </div>
 
-<main>
+<main id="main-content" tabindex="-1">
 
     <!-- HERO -->
     <section class="hero">
         <div class="container">
-            <h1>Rearrange PDF Pages Online Free</h1>
-            <p>
-                Change page sequence, reorder document sections, and rotate upside-down pages with intuitive drag-and-drop.
-                All changes occur instantly inside your web browser with local processing.
-            </p>
-            <div class="badge-group">
-                <span class="badge">🔒 Local File Processing</span>
-                <span class="badge">🖐️ Drag & Drop Ordering</span>
-                <span class="badge">🔄 90° / 180° / 270° Rotation</span>
-                <span class="badge">⚡ Zero Cloud Uploads</span>
-            </div>
+            <h1>Rearrange and rotate PDF pages</h1>
+            <p>Put scans into reading order and correct sideways pages before exporting a new PDF.</p>
+            <p><a class="android-btn" href="#rearrange-pdf-tool">Open the tool</a></p>
         </div>
     </section>
 
@@ -101,16 +95,14 @@
         <div class="tool-card" id="rearrange-pdf-tool">
             <div class="tool-icon">↕️</div>
             <h2>Reorder & Rotate Pages</h2>
-            <p class="tool-desc">
-                Select a PDF file from your device. Drag thumbnails to change their sequential position. Click ↶ or ↷ to rotate individual pages.
-            </p>
+            <p class="tool-desc">Put scans into reading order and correct sideways pages before exporting a new PDF.</p>
 
             <label class="sr-only" for="rearrangeInput">Choose a PDF to reorder or rotate pages</label>
             <input type="file" id="rearrangeInput" accept="application/pdf">
             <div id="rearrangePreview" class="preview-grid"></div>
             <p class="drag-hint">Drag pages to change their order. Use ↶ / ↷ to rotate.</p>
             <button id="rearrangeBtn" class="primary-btn" disabled>Rearrange PDF</button>
-            <div id="rearrangeStatus" class="status"></div>
+            <div id="rearrangeStatus" class="status" role="status"></div>
         </div>
     </div>
 
@@ -142,81 +134,28 @@
         </div>
     </section>
 
-    <!-- IN-DEPTH EDITORIAL GUIDE -->
     <section class="content-section">
-        <div class="container">
-            <h2>Fixing Document Flow & Orientation with Client-Side Precision</h2>
-            <p>
-                When scanning multi-page paperwork or combining documents from multiple contributors, pages frequently end up out of chronological order or rotated in conflicting directions (e.g., landscape spreadsheets mixed with portrait letters). Submitting an inverted or disorganized document looks unprofessional and creates difficulties during signing or printing.
+        <div class="container reading-page">
+            <h2>Formats and troubleshooting</h2>
+            <p><strong>PDF → one reordered PDF</strong>
             </p>
-
-            <h3>How Interactive Drag-and-Drop Simplifies Organization</h3>
-            <p>
-                PDFx provides an intuitive visual interface where every single page of your document is presented as a high-fidelity thumbnail. Using standard HTML5 Drag and Drop events, you can grab any page and slide it into its proper place. Visual drop indicators ensure you see exactly where the page will land before you release the mouse. Touch drag-and-drop support varies by browser.
-            </p>
-
-            <h3>Lossless Vector and Media Rotation</h3>
-            <p>
-                Rotating a page in PDFx does not degrade the quality of your document. Rather than re-encoding the page as a bitmap image, PDFx updates the rotation metadata tag in the PDF page dictionary (<code>/Rotate 90</code>, <code>/Rotate 180</code>, <code>/Rotate 270</code>). Existing text, vectors, and images are copied without rasterizing the pages. Image-only scans do not become searchable.
-            </p>
-
-            <div class="callout-box">
-                <h3 class="legacy-h4">Private & Secure In-Browser Processing</h3>
-                <p>
-                    The tool processes your selected PDF locally. Reordering happens directly in your browser's local memory, without uploading the document for reordering. Check your organization's policies before using third-party tools.
-                </p>
-            </div>
-
-            <h3>Common Scenarios for Rearranging PDF Pages</h3>
+            <p>Put a batch of scanned forms into chronological order.</p>
+            <p>Drag page thumbnails into the desired sequence and use rotation controls to fix sideways pages. Verify both orientation and order in the exported copy. If dragging is difficult on a touch screen, try a mouse or trackpad.</p>
+            <h2>Frequently asked questions</h2>
+            <h3>Does rotation change the source PDF?</h3>
+            <p>The rotation is applied to the generated copy.</p>
+            <h2>Further reading</h2>
             <ul>
-                <li><strong>Scanned Document Feeder Errors:</strong> Correct pages that were accidentally fed into the scanner upside down or in reverse order.</li>
-                <li><strong>Academic Presentations:</strong> Move introductory slides, executive summaries, or concluding remarks to improve presentation storytelling.</li>
-                <li><strong>Financial Reports:</strong> Place audit balance sheets, executive commentary, and notes in strict chronological sequence.</li>
-                <li><strong>Printed Booklets & Portfolios:</strong> Align double-sided booklet pagination to ensure correct binding layout.</li>
+            <li><a href="/guide-organize-rearrange-pdf-pages.html">Organize and rearrange PDF pages</a>
+            </li>
             </ul>
-        </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="content-section">
-        <div class="container">
-            <h2>Frequently Asked Questions</h2>
-            <p>Answers to common questions about rearranging and rotating PDF pages on PDFx:</p>
-
-            <div class="faq-grid">
-                <div class="faq-card">
-                    <h3 class="legacy-h4">Can I remove a page while rearranging?</h3>
-                    <p>Yes. Each page preview includes a remove button so you can discard unneeded sheets while reordering the rest.</p>
-                </div>
-                <div class="faq-card">
-                    <h3 class="legacy-h4">Does rotating a page make the text unsearchable?</h3>
-                    <p>No. PDFx rotates the PDF coordinate matrix natively without flattening. Existing selectable text is generally retained. Image-only scans remain image-only; no OCR is performed.</p>
-                </div>
-                <div class="faq-card">
-                    <h3 class="legacy-h4">Are my files stored on remote cloud servers?</h3>
-                    <p>No. All rendering, drag-and-drop updates, and re-indexing occur strictly on your local device with local file processing.</p>
-                </div>
-                <div class="faq-card">
-                    <h3 class="legacy-h4">Can I rearrange pages on a mobile touchscreen?</h3>
-                    <p>The layout adapts to mobile screens, but page drag-and-drop support depends on the browser and device. If dragging does not work, use a desktop browser.</p>
-                </div>
-                <div class="faq-card">
-                    <h3 class="legacy-h4">Is there any cost or watermarking?</h3>
-                    <p>No. PDFx is free to use and never injects watermarks or stamps into your documents.</p>
-                </div>
-                <div class="faq-card">
-                    <h3 class="legacy-h4">Can I rotate only one page without affecting the others?</h3>
-                    <p>Yes! Every page thumbnail has independent ↶ and ↷ buttons, allowing you to rotate individual pages selectively.</p>
-                </div>
-            </div>
-
-            <h3 style="margin-top: 35px;">Explore Related Tools</h3>
-            <div class="tools-pills">
-                <a href="pdf-extend.html" class="tool-pill">PDF Extend Tool</a>
-                <a href="delete-pdf-pages.html" class="tool-pill">Delete PDF Pages</a>
-                <a href="merge-pdf.html" class="tool-pill">Merge PDF Files</a>
-                <a href="split-pdf.html" class="tool-pill">Split PDF Pages</a>
-            </div>
+            <h2>Related tools</h2>
+            <ul>
+            <li><a href="/delete-pdf-pages.html">Delete pages from a PDF</a>
+            </li>
+            <li><a href="/pdf-extend.html">Add image pages to a PDF</a>
+            </li>
+            </ul>
         </div>
     </section>
 
@@ -263,10 +202,9 @@
 </footer>
 
 <!-- SCRIPTS -->
-<script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
-<script src="script.js"></script>
+<script defer src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script defer src="script.js"></script>
 
 </body>
 </html>
