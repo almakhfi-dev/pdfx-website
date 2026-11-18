@@ -882,7 +882,7 @@ footer {
     padding-top: 25px;
     text-align: center;
     font-size: 13px;
-    color: #64748b;
+    color: #94a3b8;
 }
 
 /* =========================================================
@@ -957,6 +957,7 @@ footer {
 .reading-page { max-width: 52rem; padding-block: 2rem; }
 .reading-page li + li, .reading-page details + details { margin-top: .6rem; }
 .reading-page ol, .reading-page ul { padding-inline-start: 1.5rem; }
+.reading-page :is(p, li) a:not(.android-btn) { text-decoration: underline; text-underline-offset: .15em; }
 .hero-actions { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 1rem; }
 .hero-actions > a:last-child { color: inherit; }
 .tool-card, #tools { scroll-margin-top: 9rem; }
